@@ -4,6 +4,16 @@ define ja = Character("[player_name]", who_color="#00ccff")
 define r = Character("Radio",who_color="#1bdb8b")
 define m = Character("???",who_color="#ff0000") # Potwór
 
+## Definicje przedmiotów 
+define lom = Item("Łom", "latarka.png", "latarka_hover.png")
+define latarka = Item("Latarka", "latarka.png", "latarka_hover.png")
+
+
+
+
+
+
+
 ## zmienne logiczne ( flagi) do śledzenia postępów
 default ma_lom = False
 default ma_latarke = False
@@ -120,8 +130,15 @@ label start:
                     jump cos 
             "podejdź do szafki":
                 "powoli podchodzisz do szafki, zauważasz na niej latarkę"
+                if ma_latarke:
+                    "Szafka jest pusta. Już zabrałeś stąd latarkę."
+                    jump cos
+                else:
+                    "powoli podchodzisz do szafki, zauważasz na niej latarkę."
+                    $ backpack.add(przedmiot_latarka, 100, 100)
+                    $ ma_latarke = True
                 show hero_podstawowy2 at left
-                ja "Super! wkońcu coś przydatnego"
+                ja "Super! W końcu coś przydatnego."
                 hide hero_podstawowy2
                 jump cos
 

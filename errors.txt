@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/script.rpy", line 40:
-label start :
-and File "game/script.rpy", line 62:
-label start:
-
+File "game/script.rpy", line 138: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    hide hero_podstawowy2
+    ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Dec  7 19:58:14 2025
+Sun Dec  7 21:55:54 2025
