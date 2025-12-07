@@ -51,10 +51,10 @@ label start:
                 ja "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
         "Szczerze? Nie czuję się najlepiej.":
                     
-            3     hero "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
-            3     radio "Och... Chcesz o tym porozmawiać?"
+            ja "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
+            radio "Och... Chcesz o tym porozmawiać?"
 
-                OPCJA 3
+                 
         "(Milcz)":
             
                 ja "..."
