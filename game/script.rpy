@@ -45,23 +45,29 @@ label start:
     r "Witaj w Bunkrze ... . Jestem Pan Radio. Twoim jedynym i ostatnim przyjacielem."
     label Choice:   
     menu:
-        "Co jej odpowiesz?"
+        " "
 
-        "Nic mi nie jest. Po prostu się zamyśliłem." :
-                
-            ja "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
-            "Szczerze? Nie czuję się najlepiej."
-                    
-            ja "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
-            radio "Och... Chcesz o tym porozmawiać?"
+        "Odpowiesz na moje pytanie?!" :
+            hide hero_poczatek
+            show hero_wkurw at left   
+            ja "Kim jesteś! i co ja tu robie??!"
+            hide hero_wkurw
+            show hero_poczatek at left
+            r "wyluzuuj! bo ci żyłka pęknie"
+            r"Jak powiedziałem jestem i nazywam się Pan Radio"
+            r"jak chcesz mogę być również Panią"
+            hide radio
+            show pani at right 
+            r"Widzisz mam wiele wcieleń"
+            r"Ha ha ha ha"
+            hide pani 
+            show radio at right
             
         "(Milcz)":  
+            ja "Huuuh...?"
             
-            ja "..."
-       
     #Kod tutaj wykonuje się po zakończeniu wyboru
-    radio "W każdym razie, cieszę się, że tu jesteś."
-    ja "HUH?! czy odpowiesz na"
+    r "W każdym razie, cieszę się, że tu jesteś."
     r "Sytuacja jest prosta: drzwi są zamknięte, tlen się kończy a ja się nudzę. Wyjdź stąd, zanim zginiesz."
     r "A właśnie jak ci tam było?"
     $ player_name = renpy.input("Jak masz na imię? ", length=15).strip()
@@ -71,18 +77,10 @@ label start:
     ja "Właśnie jak mam stąd wyjść"
     r "Eksploruj. Kombinuj. I na litość boską, nie dotykaj czerwonych przycisków......"
     hide radio    
-    "Drzwi od mojego pokoju są zamknięte. Co chcesz zrobić?"
+    ja "Psia mać! muszę coś wykombinować bo oszaleje.."
+    "Drzwi są zamknięte."
+    hide hero_poczatek
 
-
-#    ## show radio at right
-#     ##radio"Witaj w moim świecie! Zanim zaczniemy, powiedz mi, jak się nazywasz?"
-#    # $ player_name = renpy.input("Jak masz na imię?", length=15).strip()
-#     #    $ player_name = "hero"
-#     show hero_poczatek at left
-#     hero"Możesz na mnie mówić [player_name]."
-#     radio "dobrze więc"
-#     hero "milczy"
-#     radio "wyglądasz na przygnębionego. Wszystko w porządku?"
 
     
 
