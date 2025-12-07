@@ -31,14 +31,37 @@ image bg drzwi_wyjsciowe ="drzwi_wyjscie"
 label start:
     scene bg start 
     
-    "Budzi mnie potworny ból głowy. Wokół panuje półmrok, a powietrze pachnie stęchlizną i metalem."
-    "Próbuję wstać, ale kręci mi się w głowie."
+    "Budzi cię potworny ból głowy. Wokół panuje półmrok, a powietrze pachnie stęchlizną i metalem."
+    "Próbujesz wstać, ale przez silne zawroty głowy, twoje ciało odmawia posłuszeństwa"
+    "Przez silne zawroty wydaje ci się że słyszysz znajomy głos, ale nic ci nieprzychodzi do głowy"
+    "Haloo, haloo???"
     ## play sound "audio/blablabla.ogg" #dzwięk zgaszenia światła
     show radio at right
-    r "Odbiór. Raz, dwa, trzy. Czy ten kawał mięsa już funkcjonuje?"
+    r "Odbiór. Raz, dwa, trzy. Czy ten kawał mięsa jeszcze funkcjonuje?"
     show hero_poczatek at left
     ja "Kto... Kto mówi? Gdzie ja jestem"
-    r "Och. Wspaniale! Funkcje życiowe w normie. Witaj w Bunkrze ... . Jestem Pan Radio. Twoim jedynym przyjacielem."
+    r "Och. Wspaniale! Funkcje życiowe w normie, ale widzę usterkę w twojej pamięci..."
+    r "Chyba za mocno ci wtedy przyjebałem.. No nic"
+    r "Witaj w Bunkrze ... . Jestem Pan Radio. Twoim jedynym i ostatnim przyjacielem."
+    label Choice:   
+        menu:
+        "Co jej odpowiesz?"
+        "Nic mi nie jest. Po prostu się zamyśliłem.":
+                
+                ja "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
+        "Szczerze? Nie czuję się najlepiej.":
+                    
+            ja "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
+            radio "Och... Chcesz o tym porozmawiać?"
+
+                 
+        "(Milcz)":
+            
+                ja "..."
+       
+    #Kod tutaj wykonuje się po zakończeniu wyboru
+    radio "W każdym razie, cieszę się, że tu jesteś."
+    ja "HUH?! czy odpowiesz na"
     r "Sytuacja jest prosta: drzwi są zamknięte, tlen się kończy a ja się nudzę. Wyjdź stąd, zanim zginiesz."
     r "A właśnie jak ci tam było?"
     $ player_name = renpy.input("Jak masz na imię? ", length=15).strip()
@@ -93,31 +116,16 @@ TŁO
 
 
 
-### show radio at right
-###radio"Witaj w moim świecie! Zanim zaczniemy, powiedz mi, jak się nazywasz?" ## $ player_name = renpy.input("Jak masz na imię?", length=15).strip()
-    ##    $ player_name = "hero"
-    #show hero_poczatek at left
-    #hero"Możesz na mnie mówić [player_name]."
-    #radio "dobrze więc"
-    #hero "milczy"
-    #radio "wyglądasz na przygnębionego. Wszystko w porządku?"
+#    ## show radio at right
+#     ##radio"Witaj w moim świecie! Zanim zaczniemy, powiedz mi, jak się nazywasz?"
+#    # $ player_name = renpy.input("Jak masz na imię?", length=15).strip()
+#     #    $ player_name = "hero"
+#     show hero_poczatek at left
+#     hero"Możesz na mnie mówić [player_name]."
+#     radio "dobrze więc"
+#     hero "milczy"
+#     radio "wyglądasz na przygnębionego. Wszystko w porządku?"
 
-    #label Choice:   
-# menu:
-#     "Co jej odpowiesz?"
-#   "Nic mi nie jest. Po prostu się zamyśliłem.":  #            
-#           hero "Nie, wszystko w porządku. Po prostu... zamyśliłem się na chwilę."
-    ####Szczerze? Nie czuję się najlepiej.":
-                
-    #     3      hero "Jeśli mam być szczery, to nie jest to mój najlepszy dzień."
-    #       3     radio "Och... Chcesz o tym porozmawiać?"
-
-            # OPCJA 3
-            ##      "(Milcz)":
-            
-    #          hero "..."
-##
-    # Kod tutaj wykonuje się po zakończeniu wyboru
-    #radio "W każdym razie, cieszę się, że tu jesteś."
+    
 
    
