@@ -7,7 +7,7 @@ default mapa_tooltip = ""
 
 # Statusy lokacji
 default pokoj1 = True
-default korytarz = False
+default korytarz = True
 default stoufka = False
 default apteka = False
 default generator_light = False
@@ -58,7 +58,7 @@ screen mapa_miasta():
         imagebutton:
             auto "images/ikona_stoufka_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("stoufka_label")]
+            action [Hide("mapa_miasta"), Jump("stoufkaa_label")]
             hovered SetVariable("mapa_tooltip", "STOŁÓWKA")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -68,7 +68,7 @@ screen mapa_miasta():
         imagebutton:
             auto "images/ikonka_generator_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("generator_label")]  
+            action [Hide("mapa_miasta"), Jump("generatorr_label")]  
             hovered SetVariable("mapa_tooltip", "GENERATOR")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -79,7 +79,7 @@ screen mapa_miasta():
             
             auto "images/ikona_korytarz_%s.png" 
             focus_mask True 
-            action [Hide("mapa_miasta"), Jump("korytarz_label")]
+            action [Hide("mapa_miasta"), Jump("korytarzz_label")]
             hovered SetVariable("mapa_tooltip", "KORYTARZ")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -99,7 +99,7 @@ screen mapa_miasta():
         imagebutton:
             auto "images/ikonka_zbrojownia_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("zbrojownia_label")]
+            action [Hide("mapa_miasta"), Jump("zbrojowniaa_label")]
             hovered SetVariable("mapa_tooltip", "ZBROJOWNIA")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -109,7 +109,7 @@ screen mapa_miasta():
         imagebutton:
             auto "images/ikonka_komputerownia_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("serwerownia_label")]
+            action [Hide("mapa_miasta"), Jump("serwerowniaa_label")]
             hovered SetVariable("mapa_tooltip", "SERWEROWNIA")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -147,7 +147,7 @@ label pokoj1_label:
         "Stare jarzeniówki buczą i mrugają, zalewając celę zimnym, trupim światłem." 
     call screen Pokój_startowy_zagadka
 
-label korytarz_label:
+label korytarzz_label:
     window hide
     if prad_wlaczony:
         scene bg Korytarz with fade
@@ -156,18 +156,23 @@ label korytarz_label:
     show screen plecak_ikona    
     show screen przycisk_mapy
     "Wyszedłeś na korytarz"
-    call screen korytarz_wyjscie_z_pokoju
+    call screen Pokój_Korytarz_klikanie
 
-label stoufka_label:
+label generatorr_label:
+    window hide
+    if prad_wlaczony:
+        scene bg Korytarz with fade
+    else:
+        scene bg Korytarz_no_light 
+    show screen przycisk_mapy
+    show screen plecak_ikona
+    "Dotarłeś do pokoju z generatorem."
+    call screen Generator_Interakcje
+
+label stoufkaa_label:
     scene bg stolowka
     show screen przycisk_mapy
     "Dotarłeś do stołówki."
-    $ renpy.pause(hard=True)
-
-label generator_label:
-    scene bg generator_swiatlo
-    show screen przycisk_mapy
-    "Dotarłeś do pokoju z generatorem."
     $ renpy.pause(hard=True)
 
 label szpitall_label:
@@ -176,13 +181,13 @@ label szpitall_label:
     "Wyszedłeś do skrzydła szpitalnego."
     $ renpy.pause(hard=True)
 
-label zbrojownia_label:
+label zbrojowniaa_label:
     scene bg zbrojownia
     show screen przycisk_mapy
     "Wyszedłeś do zbrojowni"
     $ renpy.pause(hard=True)
 
-label serwerownia_label:
+label serwerowniaa_label:
     scene bg serwerownia
     show screen przycisk_mapy
     "Wyszedłeś do Serwerowni"

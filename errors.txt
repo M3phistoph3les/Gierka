@@ -2,11 +2,17 @@
 errors listed below, and try again.
 
 
-The label szpital_label is defined twice, at File "game/Mapa.rpy", line 173:
-label szpital_label:
-and File "game/script.rpy", line 538:
-label szpital_label:
+File "game/script.rpy", line 51: menu statement expects a non-empty block.
+    menu:
+        ^
 
+File "game/script.rpy", line 52: expected statement.
+    "scena 5":
+             ^
+
+File "game/script.rpy", line 55: expected statement.
+    "":
+      ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Dec 28 19:13:38 2025
+Sun Dec 28 22:43:56 2025
