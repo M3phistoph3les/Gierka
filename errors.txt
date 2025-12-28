@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 200: expected a keyword argument or child statement.
-    $ backpack.add(przedmiot_latarka, 0, 0)
-    ^
+The label szpital_label is defined twice, at File "game/Mapa.rpy", line 173:
+label szpital_label:
+and File "game/script.rpy", line 538:
+label szpital_label:
+
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sat Dec 27 23:11:19 2025
+Sun Dec 28 19:13:38 2025

@@ -89,7 +89,7 @@ screen mapa_miasta():
         imagebutton:
             auto "images/ikonka_apteka_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("szpital_label")]
+            action [Hide("mapa_miasta"), Jump("szpitall_label")]
             hovered SetVariable("mapa_tooltip", "SZPITAL")
             unhovered SetVariable("mapa_tooltip", "")
     else:
@@ -135,11 +135,28 @@ screen mapa_miasta():
 
 label pokoj1_label:
     window hide
-    scene bg PokojStartowy
+    # Sprawdzamy stan prądu przy wejściu do celi
+    if prad_wlaczony:
+        scene bg PokojStartowy with fade # Jasne tło
+    else:
+        scene bg PokojStartowybezswiatla with fade # Ciemne tło
+
+    show screen plecak_ikona
     show screen przycisk_mapy
-    "Jesteś w pokoju początkowym."
-    # Gra czeka tutaj, aż gracz kliknie w mapę
+    if prad_wlaczony:
+        "Stare jarzeniówki buczą i mrugają, zalewając celę zimnym, trupim światłem." 
     call screen Pokój_startowy_zagadka
+
+label korytarz_label:
+    window hide
+    if prad_wlaczony:
+        scene bg Korytarz with fade
+    else:
+        scene bg Korytarz_no_light 
+    show screen plecak_ikona    
+    show screen przycisk_mapy
+    "Wyszedłeś na korytarz"
+    call screen korytarz_wyjscie_z_pokoju
 
 label stoufka_label:
     scene bg stolowka
@@ -153,13 +170,7 @@ label generator_label:
     "Dotarłeś do pokoju z generatorem."
     $ renpy.pause(hard=True)
 
-label korytarz_label:
-    scene bg Korytarz
-    show screen przycisk_mapy
-    "Wyszedłeś na korytarz"
-    $ renpy.pause(hard=True)
-
-label szpital_label:
+label szpitall_label:
     scene bg apteka1
     show screen przycisk_mapy
     "Wyszedłeś do skrzydła szpitalnego."
