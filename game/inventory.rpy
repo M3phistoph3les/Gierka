@@ -100,6 +100,14 @@ default backpack = Inventory()
 
 # Definiujemy przedmioty
 define przedmiot_lom = Item("ŁOM", "lom.png", "lom_hover.png")
-define przedmiot_karta = Item("KARTA DOSTĘPU", "karta.png", "karta_hover.png")
 define przedmiot_latarka = Item("LATARKA", "latarka.png", "latarka_hover.png")
+#-------- PRZEDMIOT Z GENERATORA
+define przedmiot_karta = Item("KARTA DOSTĘPU", "karta.png", "karta_hover.png")
+#-------- PRZEDMIOT Z APTEKI
 define przedmiot_bezpiecznik = Item("BEZPIECZNIK", "bezpiecznik.png", "bezpiecznik_hover.png")
+#---------NOWE JADALNIOWE PRZEDMIOTY
+define przedmiot_zeton = Item("ŻETON PRACOWNICZY", "zeton.png", "zeton_hover.png")
+define przedmiot_karta_serwer = Item("KARTA ADMINISTRATORA", "karta_serwer.png", "karta_serwer_hover.png")
+#---------NOWE PRZEDMIOTY ZBROJOWNIA
+define przedmiot_strzelba = Item("PISTOLET BOJOWY", "pistolet.png", "pistolet_hover.png")
+define przedmiot_karabin = Item("KARABIN SZTURMOWY", "karabin.png", "karabin_hover.png")

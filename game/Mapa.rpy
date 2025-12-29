@@ -53,27 +53,7 @@ screen mapa_miasta():
             unhovered SetVariable("mapa_tooltip", "")
     else:
         add "images/ikonka_cela_no.png"
-    # --- LOKACJA: STOŁÓWKA ---
-    if stoufka:
-        imagebutton:
-            auto "images/ikona_stoufka_%s.png" 
-            focus_mask True
-            action [Hide("mapa_miasta"), Jump("stoufkaa_label")]
-            hovered SetVariable("mapa_tooltip", "STOŁÓWKA")
-            unhovered SetVariable("mapa_tooltip", "")
-    else:
-        add "images/ikonka_stoufka_no.png"
-    # --------- LOKACJA: GENERATOR
-    if generator_light:
-        imagebutton:
-            auto "images/ikonka_generator_%s.png" 
-            focus_mask True
-            action [Hide("mapa_miasta"), Jump("generatorr_label")]  
-            hovered SetVariable("mapa_tooltip", "GENERATOR")
-            unhovered SetVariable("mapa_tooltip", "")
-    else:
-        add "images/ikonka_generator_no.png"
-    #--------- LOKACJA : KORYTARZ
+        #---LOKACJA: KORYTARZ---
     if korytarz:
         imagebutton:
             
@@ -83,8 +63,18 @@ screen mapa_miasta():
             hovered SetVariable("mapa_tooltip", "KORYTARZ")
             unhovered SetVariable("mapa_tooltip", "")
     else:
-        add "images/ikonka_korytarz_no.png"
-    # --- LOKACJA: SZPITAL ---
+        add "images/ikonka_korytarz_no.png"    
+    # ---LOKACJA: GENERATOR---
+    if generator_light:
+        imagebutton:
+            auto "images/ikonka_generator_%s.png" 
+            focus_mask True
+            action [Hide("mapa_miasta"), Jump("generatorr_label")]  
+            hovered SetVariable("mapa_tooltip", "GENERATOR")
+            unhovered SetVariable("mapa_tooltip", "")
+    else:
+        add "images/ikonka_generator_no.png"
+    # ---LOKACJA: SZPITAL---
     if apteka:
         imagebutton:
             auto "images/ikonka_apteka_%s.png" 
@@ -94,17 +84,18 @@ screen mapa_miasta():
             unhovered SetVariable("mapa_tooltip", "")
     else:
         add "images/ikonka_szpital_no.png" 
-    #--- LOKACJA: ZBROJOWNIA ---
-    if zbrojownia:
+    
+    # ---LOKACJA: STOŁÓWKA---
+    if stoufka:
         imagebutton:
-            auto "images/ikonka_zbrojownia_%s.png" 
+            auto "images/ikona_stoufka_%s.png" 
             focus_mask True
-            action [Hide("mapa_miasta"), Jump("zbrojowniaa_label")]
-            hovered SetVariable("mapa_tooltip", "ZBROJOWNIA")
+            action [Hide("mapa_miasta"), Jump("stoufkaa_label")]
+            hovered SetVariable("mapa_tooltip", "STOŁÓWKA")
             unhovered SetVariable("mapa_tooltip", "")
     else:
-        add "images/ikonka_zbrojownia_no.png" 
-    #--- LOKACJA : SERWEROWNIA ---
+        add "images/ikonka_stoufka_no.png"
+    #---LOKACJA : SERWEROWNIA---
     if komputerownia:
         imagebutton:
             auto "images/ikonka_komputerownia_%s.png" 
@@ -114,14 +105,16 @@ screen mapa_miasta():
             unhovered SetVariable("mapa_tooltip", "")
     else:
         add "images/ikonka_komputerownia_no.png" 
-
-
-
-
-
-
-    # --- SEKCJA TOOLTIP (TEGO BRAKOWAŁO!) ---
-    # To odpowiada za wyświetlanie napisów
+    #---LOKACJA: ZBROJOWNIA---
+    if zbrojownia:
+        imagebutton:
+            auto "images/ikonka_zbrojownia_%s.png" 
+            focus_mask True
+            action [Hide("mapa_miasta"), Jump("zbrojowniaa_label")]
+            hovered SetVariable("mapa_tooltip", "ZBROJOWNIA")
+            unhovered SetVariable("mapa_tooltip", "")
+    else:
+        add "images/ikonka_zbrojownia_no.png" 
     if mapa_tooltip != "":
         frame:
             # Jeśli nie masz gui/frame.png, Ren'Py użyje domyślnego tła
@@ -161,34 +154,54 @@ label korytarzz_label:
 label generatorr_label:
     window hide
     if prad_wlaczony:
-        scene bg Korytarz with fade
+        scene bg generator_swiatlo with fade
     else:
-        scene bg Korytarz_no_light 
+        scene bg generator_no_swiatlo 
     show screen przycisk_mapy
     show screen plecak_ikona
     "Dotarłeś do pokoju z generatorem."
     call screen Generator_Interakcje
 
-label stoufkaa_label:
-    scene bg stolowka
-    show screen przycisk_mapy
-    "Dotarłeś do stołówki."
-    $ renpy.pause(hard=True)
-
 label szpitall_label:
-    scene bg apteka1
+    window hide
+    if prad_wlaczony:
+        scene apteka with fade
+    else:
+        scene szpital_no 
+    show screen plecak_ikona    
     show screen przycisk_mapy
-    "Wyszedłeś do skrzydła szpitalnego."
-    $ renpy.pause(hard=True)
-
-label zbrojowniaa_label:
-    scene bg zbrojownia
+    "Wyszedłeś Apteki"
+    call screen Szpital_Pokoj1_Screen
+    
+label stoufkaa_label:
+    window hide
+    if prad_wlaczony:
+        scene bg stolowka with fade
+    else:
+        scene bg stolowka_no 
+    show screen plecak_ikona    
     show screen przycisk_mapy
-    "Wyszedłeś do zbrojowni"
-    $ renpy.pause(hard=True)
+    "Wyszedłeś do Jadalni"
+    call screen Jadalnia_Interakcje 
 
 label serwerowniaa_label:
-    scene bg serwerownia
+    window hide
+    if prad_wlaczony:
+        scene bg serwerownia with fade
+    else:
+        scene bg serwerownia_no 
+    show screen plecak_ikona    
     show screen przycisk_mapy
     "Wyszedłeś do Serwerowni"
-    $ renpy.pause(hard=True)
+    call screen Serwerownia_Interakcje
+
+label zbrojowniaa_label:
+    window hide
+    if prad_wlaczony:
+        scene bg zbrojownia with fade
+    else:
+        scene bg zbrojownia 
+    show screen plecak_ikona    
+    show screen przycisk_mapy
+    "Wyszedłeś Zbrojowni"
+    call screen Zbrojownia_Interakcje

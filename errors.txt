@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "game/script.rpy", line 52: expected statement.
-    "scena 5":
-             ^
-
-File "game/script.rpy", line 55: expected statement.
-    "":
-      ^
+File "game/script.rpy", line 719: expected ':' not found.
+    else
+         ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Dec 28 22:43:56 2025
+Mon Dec 29 17:51:02 2025
