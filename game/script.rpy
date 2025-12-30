@@ -117,7 +117,7 @@ label start:
         "Drżąc próbujesz się podnieść, tocząc dalej walkę z ociężałymi powiekami."
         "Czujesz przyśpieszony rytm serca, zimne żyły i tętnice zaczynają pulsować wrzącą krwią"
         "Powieki w końcu ustępują Twojej silnej woli, a Ty tak gwałtownie siadasz na brzegu łóżka, że aż zakręciło Ci się w głowie."
-        
+
         scene black with dissolve
         stop music fadeout 2.0
         
@@ -1258,6 +1258,18 @@ screen Jadalnia_Interakcje():
         unhovered SetVariable("interakcja_tooltip", "")
 
     # 4. POWRÓT NA KORYTARZ
+    imagebutton:
+        xpos 0 ypos 0 
+        if prad_wlaczony:
+            idle "images/strzalka_wyjscie_na_korytarz_idle.png"
+            hover "images/strzalka_wyjscie_na_korytarz_hover.png"
+        else:
+            idle "images/strzalka_wyjscie_na_korytarz_pront_idle.png"
+            hover "images/strzalka_wyjscie_na_korytarz_pront_hover.png"
+        focus_mask True
+        action [SetVariable("interakcja_tooltip", ""), Jump("powrot_do_korytarza")]
+        hovered SetVariable("interakcja_tooltip", "WRÓĆ DO : KORYTARZ")
+        unhovered SetVariable("interakcja_tooltip", "")
    
 # -------------------------------------------------------------------------
 # EKRAN ZBLIŻENIA (STOLIK Z KUBKIEM)
@@ -1347,7 +1359,7 @@ label plakaty_lore:
 # --- 2. ZABRANIE ŻETONU ---
 label akcja_znalezienia_zetonu:
     $ ma_zeton = True
-    $ backpack.add(przedmiot_zeton, 0, 0) # Dodanie do plecaka
+    $ backpack.add(przedmiot_zeton, 0, 0) 
     
     "Podnosisz metalowy krążek, który leżał pod kubkiem."
     ja "Żeton żywnościowy. Ktoś go tu schował na czarną godzinę."
@@ -1404,7 +1416,8 @@ label automat_uzycie_zetonu:
     
     $ ma_karta_serwerownia = True
     $ serwerownia_otwarta = True
-    $ backpack.add(przedmiot_karta_serwer, 400, 500) # Dodanie karty do plecaka
+    $ komputerownia = True
+    $ backpack.add(przedmiot_karta_serwer, 0, 0) 
 
     show hero_szczesliwy at left
     ja "Mam ją! Karta Administratora Sieci."
@@ -1468,13 +1481,8 @@ screen Serwerownia_Interakcje():
     imagebutton:
         xpos 0 ypos 0 # Środek biurka
         focus_mask True
-        if prad_wlaczony:
-            idle "images/serwerownia_terminal_idle_light.png" # Wytnij monitor
-            hover "images/serwerownia_terminal_hover_light.png"
-        else:
-            idle "images/serwerownia_terminal_idle_dark.png"
-            hover "images/serwerownia_terminal_hover_dark.png"
-        
+        idle "images/serwerownia_terminal_idle_dark.png"
+        hover "images/serwerownia_terminal_hover_dark.png"
         action Jump("serwerownia_terminal_check")
         hovered SetVariable("interakcja_tooltip", "TERMINAL GŁÓWNY: AI-RIS")
         unhovered SetVariable("interakcja_tooltip", "")
@@ -1499,10 +1507,19 @@ screen Serwerownia_Interakcje():
         hovered SetVariable("interakcja_tooltip", "SPRAWDŹ LOGI SYSTEMOWE")
         unhovered SetVariable("interakcja_tooltip", "")
 
-    # 4. WYJŚCIE
-    textbutton "POWRÓT NA KORYTARZ":
-        align (0.95, 0.95)
+    # 4. WYJŚCIE NA KORYTARZ
+    imagebutton:
+        xpos 0 ypos 0 
+        if prad_wlaczony:
+            idle "images/strzalka_wyjscie_na_korytarz_serwer_idle.png"
+            hover "images/strzalka_wyjscie_na_korytarz_serwer_hover.png"
+        else:
+            idle "images/strzalka_wyjscie_na_korytarz_serwer_pront_idle.png"
+            hover "images/strzalka_wyjscie_na_korytarz_serwer_pront_hover.png"
+        focus_mask True
         action [SetVariable("interakcja_tooltip", ""), Jump("powrot_do_korytarza")]
+        hovered SetVariable("interakcja_tooltip", "WRÓĆ DO : KORYTARZ")
+        unhovered SetVariable("interakcja_tooltip", "")
 
 # -------------------------------------------------------------------------
 # NOWA MECHANIKA: MINIGRA HAKERSKA (STABILIZACJA)
