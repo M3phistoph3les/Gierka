@@ -1190,7 +1190,7 @@ screen Jadalnia_Interakcje():
 
     # 1. AUTOMAT (Po lewej)
     imagebutton:
-        xpos 0 ypos 0 # Dopasuj do grafiki
+        xpos 0 ypos 0
         focus_mask True
         if prad_wlaczony:
             idle "images/automat_swiatlo_idle.png" 
@@ -1205,38 +1205,45 @@ screen Jadalnia_Interakcje():
 
     # 2. PLAKATY (Na ścianie - dają kod)
     imagebutton:
-        xpos 0 ypos 0 # Dopasuj do plakatów na ścianie
-        idle "images/niewidzialny_kwadrat.png"
-        hover "images/niewidzialny_kwadrat.png"
+        xpos 0 ypos 0 
+        if prad_wlaczony:
+            idle "images/plakaty_prad_wlaczony_idle.png"
+            hover "images/plakaty_prad_wlaczony_hover.png"
+        else:
+            idle "images/plakaty_idle.png"
+            hover "images/plakaty_hover.png"
         focus_mask True
         action Jump("plakaty_lore")
         hovered SetVariable("interakcja_tooltip", "PRZECZYTAJ PLAKATY")
         unhovered SetVariable("interakcja_tooltip", "")
 
     # 3. STÓŁ Z KUBKIEM (Po prawej - otwiera zbliżenie)
-    # Przycisk jest aktywny zawsze, aby gracz mógł wrócić do tej lokacji
     imagebutton:
-        xpos 0 ypos 0 # Dopasuj do stołu
-        idle "images/niewidzialny_kwadrat.png"
-        hover "images/niewidzialny_kwadrat.png"
+        xpos 0 ypos 0 
+        if prad_wlaczony:
+            idle "images/przedmiot_stol_jadalnia_prad_wlaczony_idle.png"
+            hover "images/przedmiot_stol_jadalnia_prad_wlaczony_hover.png"
+        else:
+            idle "images/przedmiot_stol_jadalnia_idle.png"
+            hover "images/przedmiot_stol_jadalnia_hover.png"
         focus_mask True
         action Show("stolik_zblizenie") 
         hovered SetVariable("interakcja_tooltip", "PRZESZUKAJ STÓŁ")
         unhovered SetVariable("interakcja_tooltip", "")
 
     # 4. POWRÓT NA KORYTARZ
-    textbutton "POWRÓT NA KORYTARZ":
-        align (0.95, 0.95)
-        action [SetVariable("interakcja_tooltip", ""), Jump("powrot_do_korytarza")]
-
-
+   
 # -------------------------------------------------------------------------
 # EKRAN ZBLIŻENIA (STOLIK Z KUBKIEM)
 # -------------------------------------------------------------------------
 screen stolik_zblizenie():
     modal True
     zorder 160
-    add "bg stolik_zblizenie_bg" 
+    on "show" action SetVariable("kubek_przesuniety", False)
+    if prad_wlaczony:
+        add "stolik_zblizenie_prad_bg"
+    else:
+        add "stolik_zblizenie_bg" 
 
     if interakcja_tooltip != "":
         frame:
@@ -1250,32 +1257,42 @@ screen stolik_zblizenie():
     if not kubek_przesuniety:
         # A. Kubek stoi normalnie (Kliknij by przesunąć)
         imagebutton:
-            xpos 0 ypos 0 # Środek kadru
-            idle "images/kubek_idle.png" 
-            hover "images/kubek_hover.png"
+            xpos 0 ypos 0 
+            if prad_wlaczony:
+                idle "images/kubek_prad_idle.png" 
+                hover "images/kubek_prad_hover.png" 
+            else:
+                idle "images/kubek_idle.png" 
+                hover "images/kubek_hover.png"
             focus_mask True
-            # Po kliknięciu zmieniamy flagę na True
             action [SetVariable("kubek_przesuniety", True)] 
             hovered SetVariable("interakcja_tooltip", "PRZESUŃ KUBEK")
             unhovered SetVariable("interakcja_tooltip", "")
     else:
-        # B. Kubek jest przesunięty (wyświetlamy go jako grafikę obok)
-        add "images/kubek_lezacy.png" xpos 600 ypos 350 
-
+        # B. Kubek jest przesunięty (wyświetlamy go jako grafikę obok/u góry)
+        if prad_wlaczony:
+            add "images/kubek_lezacy.png" xpos 0 ypos 0 
+        else:
+            add "images/kubek_lezacy_ciemny.png" xpos 0 ypos 0 
+        
         # C. Żeton (widoczny tylko gdy kubek przesunięty i jeszcze go nie mamy)
         if not ma_zeton:
             imagebutton:
-                xpos 0 ypos 0 # W miejscu gdzie stał kubek
-                idle "images/zeton_world_idle.png" 
-                hover "images/zeton_world_hover.png"
+                xpos 0 ypos 0 
+                if prad_wlaczony:
+                    idle "images/zeton_kubek_prad_idle.png" 
+                    hover "images/zeton_kubek_prad_hover.png"
+                else:
+                    idle "images/zeton_kubek_idle.png" 
+                    hover "images/zeton_kubek_hover.png"
                 focus_mask True
-                action [SetVariable("interakcja_tooltip", ""), Hide("stolik_zblizenie"), Jump("akcja_znalezienia_zetonu")]
+                action [SetVariable("interakcja_tooltip", ""), SetVariable("kubek_przesuniety", False), Hide("stolik_zblizenie"), Jump("akcja_znalezienia_zetonu")]
                 hovered SetVariable("interakcja_tooltip", "WEŹ ŻETON")
                 unhovered SetVariable("interakcja_tooltip", "")
 
     textbutton "WRÓĆ":
         align (0.5, 0.9)
-        action [SetVariable("interakcja_tooltip", ""), Hide("stolik_zblizenie")]
+        action [SetVariable("interakcja_tooltip", ""), SetVariable("kubek_przesuniety", False), Hide("stolik_zblizenie")]
 
 
 # -------------------------------------------------------------------------
@@ -1304,7 +1321,7 @@ label plakaty_lore:
 # --- 2. ZABRANIE ŻETONU ---
 label akcja_znalezienia_zetonu:
     $ ma_zeton = True
-    $ backpack.add(przedmiot_zeton, 100, 500) # Dodanie do plecaka
+    $ backpack.add(przedmiot_zeton, 0, 0) # Dodanie do plecaka
     
     "Podnosisz metalowy krążek, który leżał pod kubkiem."
     ja "Żeton żywnościowy. Ktoś go tu schował na czarną godzinę."

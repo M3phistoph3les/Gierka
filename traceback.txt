@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/przedmiot_drzwi_serwerownia_ciemne_zamkniete_hover.png') at 0x0000000008f0d4f0>:
-  File "game/script.rpy", line 385, in script
-    call screen Pokój_Korytarz_klikanie
+While loading <renpy.display.im.Image object ('images/plakaty_prad_wlaczony_idle.png') at 0x00000000187ae630>:
+  File "game/script.rpy", line 1319, in script
+    call screen Jadalnia_Interakcje
 Exception: renpy.restart_interaction() was called 100 times without processing any input.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 385, in script
-    call screen Pokój_Korytarz_klikanie
+  File "game/script.rpy", line 1319, in script
+    call screen Jadalnia_Interakcje
   File "renpy/ast.py", line 2231, in execute
     self.call("execute")
     ~~~~~~~~~^^^^^^^^^^^
@@ -35,4 +35,4 @@ Exception: renpy.restart_interaction() was called 100 times without processing a
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.4.1.25072401
 PROJEKT ARKA 
-Mon Dec 29 21:58:30 2025
+Tue Dec 30 20:08:24 2025

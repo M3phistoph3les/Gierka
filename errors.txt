@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 945: 'scene' is not a keyword argument or valid child of the screen statement.
-    scene bg apteka1 with fade
-         ^
+File "game/script.rpy", line 1238: 'idle' is not a keyword argument or valid child of the textbutton statement.
+    idle "images/drzwi_powrot_kotytarz_prad_wlaczony_idle.png"
+        ^
+
+File "game/script.rpy", line 1274: reached end of line when expecting ':'.
+    if prad_wlaczony
+                    ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Mon Dec 29 21:52:16 2025
+Tue Dec 30 19:36:09 2025
