@@ -91,10 +91,7 @@ label start:
 
 #endregion 
     label początek_gry:
-        
-        scene black with dissolve
-        stop music fadeout 2.0
-        
+
         "Otula Cię aksamitna ciemność ze wszystkich stron..."
         "Nie czujesz ciężaru myśli i wspomień, a czas zdaje się stać w miejscu"
         "Czujesz się po prostu bezpiecznie, chyba pierwszy raz od bardzo, bardzo dawna"
@@ -120,11 +117,13 @@ label start:
         "Drżąc próbujesz się podnieść, tocząc dalej walkę z ociężałymi powiekami."
         "Czujesz przyśpieszony rytm serca, zimne żyły i tętnice zaczynają pulsować wrzącą krwią"
         "Powieki w końcu ustępują Twojej silnej woli, a Ty tak gwałtownie siadasz na brzegu łóżka, że aż zakręciło Ci się w głowie."
-
-
-        #"Budzi cię tępy, pulsujący ból z tyłu czaszki. Próbujesz otworzyć oczy, ale powieki są ciężkie jak ołów."
-        #"Twoje ciało jest odrętwiałe, jakbyś spał miesiącami. W ustach czujesz metaliczny posmak krwi i stęchliznę."
-        #"Próbujesz się podnieść. Mięśnie drżą, odmawiając posłuszeństwa. Jesteś słaby... Zbyt słaby."
+        
+        scene black with dissolve
+        stop music fadeout 2.0
+        
+        "Budzi cię tępy, pulsujący ból z tyłu czaszki. Próbujesz otworzyć oczy, ale powieki są ciężkie jak ołów."
+        "Twoje ciało jest odrętwiałe, jakbyś spał miesiącami. W ustach czujesz metaliczny posmak krwi i stęchliznę."
+        "Próbujesz się podnieść. Mięśnie drżą, odmawiając posłuszeństwa. Jesteś słaby... Zbyt słaby."
         
         scene bg PokojStartowy with fade
         
