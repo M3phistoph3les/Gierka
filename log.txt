@@ -1,20 +1,20 @@
-2026-01-05 16:44:11 UTC
+2026-01-05 17:26:23 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.4.1.25072401
 
-Early init took 27 ms
-Loading error handling took 20 ms
-Loading script took 414 ms
-Loading save slot metadata took 16 ms
+Early init took 28 ms
+Loading error handling took 13 ms
+Loading script took 67 ms
+Loading save slot metadata took 17 ms
 Loading persistent took 0 ms
-Running init code took 43 ms
-Loading analysis data took 7 ms
+Running init code took 29 ms
+Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 8 ms
+Reloading save slot metadata took 9 ms
 Dump and make backups took 22 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 27 ms
+Initial gc took 30 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
@@ -22,152 +22,12 @@ Creating interface object took 2 ms
 Init translation took 0 ms
 Cleaning stores took 1 ms
 Load screen analysis took 11 ms
-Analyze screens took 2 ms
+Analyze screens took 0 ms
 Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
-Save bytecode took 14 ms
-Running _start took 0 ms
-Interface start took 172 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'ATI Technologies Inc.'
-Renderer: 'AMD Radeon RX 7800 XT'
-Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "renpy/ast.py", line 1622, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "renpy/script.py", line 1161, in lookup
-    raise LabelNotFound(original)
-renpy.script.LabelNotFound: could not find label 'logic_sprawdz_shotgun'. Did you mean: 'logic_sprawdz_karabin'?
-
-While running game code:
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-renpy.script.LabelNotFound: could not find label 'logic_sprawdz_shotgun'. Did you mean: 'logic_sprawdz_karabin'?
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 11 ms
-Loading script took 228 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 19 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
-Dump and make backups took 24 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 39 ms
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 5 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 4 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 134 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'ATI Technologies Inc.'
-Renderer: 'AMD Radeon RX 7800 XT'
-Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1829, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1809, in script call
-    call logic_sprawdz_karabin
-  File "game/script.rpy", line 1813, in script call
-    call logic_sprawdz_karabin
-  File "game/script.rpy", line 2137, in script
-    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
-  File "renpy/ast.py", line 2915, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 991, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/sayexports.py", line 118, in say
-    what = what % tag_quoting_dict
-           ~~~~~^~~~~~~~~~~~~~~~~~
-ValueError: unsupported format character '.' (0x2e) at index 51
-
-While running game code:
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1829, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1821, in script call
-    call logic_sprawdz_shotgun
-  File "game/script.rpy", line 1809, in script call
-    call logic_sprawdz_karabin
-  File "game/script.rpy", line 1813, in script call
-    call logic_sprawdz_karabin
-  File "game/script.rpy", line 2137, in script
-    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
-ValueError: unsupported format character '.' (0x2e) at index 51
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 6 ms
-Loading script took 198 ms
-Loading save slot metadata took 11 ms
-Loading persistent took 0 ms
-Running init code took 19 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 9 ms
-Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
-Dump and make backups took 23 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 47 ms
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 6 ms
-Save screen analysis took 9 ms
-Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 172 ms
+Running _start took 1 ms
+Interface start took 163 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
