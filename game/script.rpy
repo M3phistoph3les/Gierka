@@ -52,10 +52,19 @@ default hack_progress = 0
 default lore_read_count = 0 
 
 # Finał
+default dobry_karabin_nr = 0
+default dobry_pistolet_nr = 0
+default sprawdzona_bron_nr = 0
+default wylosowany_typ_broni= ""
+default wylosowany_numer_broni= 0
 default systemy_obronne_aktywne = False
 default ma_bron = False
 default typ_broni = "brak" 
 default zaufanie_ai = 0
+default boss_hp = 100
+default player_hp = 100
+default pistol_targets_hit = 0
+default pistol_targets_needed = 5
 
 ## ----TŁA---------
 image bg PokojStartowy ="pokoj1"
@@ -74,9 +83,10 @@ image bg serwerownia ="komputerownia"
 image bg serwerownia_no = "serwerownia_no"
 image bg zbrojownia ="zbrojownia"
 image bg drzwi_wyjsciowe ="drzwi_wyjscie"
+image bg drzwi_wyjsciowe_otwarte = "drzwi_wyjście_otwarte"
 image bg tlo_mapa = "tło_mapa"
 #---------------HAKOWANIE SERWEROWNIA
-image bg terminal_hacking = Solid("#001100")
+image bg terminal_hacking = "terminal_hacking_bg"
 #---------------JADALNIOWY STOLIK------
 image bg stolik_zblizenie_bg = "stolik_zblizenie" # Twoje tło zbliżenia na stół
 image monster_boss = "unnamed" # Potwór z głową TV
@@ -1480,7 +1490,7 @@ screen Serwerownia_Interakcje():
 # -------------------------------------------------------------------------
 screen Hacking_Minigame():
     modal True
-    add "terminal_hacking_bg" 
+    add "terminal_hacking" 
 
     # Pasek postępu
     bar:
@@ -1614,31 +1624,37 @@ label serwerownia_lore_2:
 # CZĘŚĆ 1: WEJŚCIE DO ZBROJOWNI
 # -------------------------------------------------------------------------
 label zbrojownia_start_label:
+    python:
+        if not hasattr(store, 'dobry_karabin_nr'):
+            store.dobry_karabin_nr = 0
+        if not hasattr(store, 'dobry_pistolet_nr'):
+            store.dobry_pistolet_nr = 0
+        if not hasattr(store, 'sprawdzona_bron_nr'):
+            store.sprawdzona_bron_nr = 0
+
     scene bg zbrojownia with fade
-    
-    # Resetujemy tooltip po wejściu
     $ interakcja_tooltip = ""
+
+    # --- LOSOWANIE SPRAWNEJ BRONI ---
+    if dobry_karabin_nr == 0:
+        $ dobry_karabin_nr = renpy.random.randint(1, 3)
+    
+    if dobry_pistolet_nr == 0:
+        $ dobry_pistolet_nr = renpy.random.randint(1, 3)
 
     if not systemy_obronne_aktywne:
         show hero_przestraszony at left with dissolve
-        ja "Zatrzasnąłem drzwi, ale słyszę, jak on w nie uderza... Długo nie wytrzymają."
+        ja "Zatrzasnąłem drzwi, ale on zaraz tu będzie..."
         
-        # Zmiana koloru Ai-ris na cyjan (jako AI)
         $ r = Character("Ai-ris", who_color="#00ffff")
         
-        r "Spokojnie, Operatorze. Te grodzie wytrzymają uderzenie taktycznej głowicy nuklearnej. Obiekt Zero się nie przebije. Jeszcze nie."
-        
-        ja "Jeszcze nie?! Muszę się uzbroić. Widzę broń za kratami, ale wszystko jest zablokowane."
-        
-        r "Procedura 'Lockdown' odcięła zasilanie zamków elektromagnetycznych. Panel sterowania po lewej odpowiada za systemy wieżyczek i zamki zbrojowni."
-        r "Użyj narzędzi, które znalazłeś w Generatorze. Musisz zmostkować obwód."
-        
+        r "Spokojnie. Grodzie wytrzymają. Musisz przywrócić zasilanie do zamków zbrojowni."
+        r "Użyj panelu po lewej. Ktoś celowo przeciął obwody."
         hide hero_przestraszony
     
     call screen Zbrojownia_Interakcje
-
 # -------------------------------------------------------------------------
-# EKRAN ZBROJOWNI
+# EKRAN GŁÓWNY ZBROJOWNI
 # -------------------------------------------------------------------------
 screen Zbrojownia_Interakcje():
     use plecak_ikona
@@ -1650,50 +1666,113 @@ screen Zbrojownia_Interakcje():
             xalign 0.5 yalign 0.1
             text "[interakcja_tooltip]" size 24 color "#fff" outlines [(2,"#000", 0,0)]
 
-    # 1. PANEL STEROWANIA (Po lewej)
+    # 1. PANEL STEROWANIA
     imagebutton:
-        xpos 0 ypos 0 # Panel z diodami po lewej
-        idle "images/niewidzialny_kwadrat.png" 
-        hover "images/niewidzialny_kwadrat.png"
+        xpos 0 ypos 0 
+        idle "images/panel_sterowania_idle.png" 
+        hover "images/panel_sterowania_hover.png"
         focus_mask True
         
         if not systemy_obronne_aktywne:
             action Jump("zbrojownia_naprawa_panelu")
-            hovered SetVariable("interakcja_tooltip", "NAPRAW PANEL STEROWANIA")
+            hovered SetVariable("interakcja_tooltip", "NAPRAW PANEL")
         else:
             action NullAction()
-            hovered SetVariable("interakcja_tooltip", "SYSTEMY AKTYWNE")
-        
+            hovered SetVariable("interakcja_tooltip", "PANEL AKTYWNY")
         unhovered SetVariable("interakcja_tooltip", "")
 
-    # 2. REGAŁ Z BRONIĄ (Po prawej)
-    imagebutton:
-        xpos 0 ypos 0 # Regał z bronią
-        idle "images/niewidzialny_kwadrat.png"
-        hover "images/niewidzialny_kwadrat.png"
-        focus_mask True
+    # --- REGAŁ Z BRONIĄ ---
+    
+    if systemy_obronne_aktywne and not ma_bron:
         
-        if systemy_obronne_aktywne and not ma_bron:
-            action Jump("zbrojownia_wybor_broni")
-            hovered SetVariable("interakcja_tooltip", "WYBIERZ UZBROJENIE")
-        elif not systemy_obronne_aktywne:
+        # === PÓŁKA GÓRNA: KARABINY ===
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_karabin_na_polce1_idle.png" 
+            hover "images/bron_karabin_na_polce1_hover.png"
+            focus_mask True
+            action Jump("sprawdz_karabin_1")
+            hovered SetVariable("interakcja_tooltip", "KARABIN #1")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_karabin_na_polce2_idle.png" 
+            hover "images/bron_karabin_na_polce2_hover.png"
+            focus_mask True
+            action Jump("sprawdz_karabin_2")
+            hovered SetVariable("interakcja_tooltip", "KARABIN #2")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_karabin_na_polce3_idle.png" 
+            hover "images/bron_karabin_na_polce3_hover.png"
+            focus_mask True
+            action Jump("sprawdz_karabin_3")
+            hovered SetVariable("interakcja_tooltip", "KARABIN #3")
+
+
+        # === PÓŁKA ŚRODKOWA: STRZELBY (SHOTGUNY) ===
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_shotgun_na_polce1_idle.png"
+            hover "images/bron_shotgun_na_polce1_hover.png"
+            focus_mask True
+            action Jump("sprawdz_shotgun_1")
+            hovered SetVariable("interakcja_tooltip", "STRZELBA #1")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_shotgun_na_polce2_idle.png"
+            hover "images/bron_shotgun_na_polce2_hover.png"
+            focus_mask True
+            action Jump("sprawdz_shotgun_2")
+            hovered SetVariable("interakcja_tooltip", "STRZELBA #2")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_shotgun_na_polce3_idle.png"
+            hover "images/bron_shotgun_na_polce3_hover.png"
+            focus_mask True
+            action Jump("sprawdz_shotgun_3")
+            hovered SetVariable("interakcja_tooltip", "STRZELBA #3")
+
+
+        # === PÓŁKA DOLNA: PISTOLETY ===
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_pistolet_na_polce1_idle.png"
+            hover "images/bron_pistolet_na_polce1_hover.png"
+            focus_mask True
+            action Jump("sprawdz_pistolet_1")
+            hovered SetVariable("interakcja_tooltip", "PISTOLET #1")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_pistolet_na_polce2_idle.png"
+            hover "images/bron_pistolet_na_polce2_hover.png"
+            focus_mask True
+            action Jump("sprawdz_pistolet_2")
+            hovered SetVariable("interakcja_tooltip", "PISTOLET #2")
+
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/bron_pistolet_na_polce3_idle.png"
+            hover "images/bron_pistolet_na_polce3_hover.png"
+            focus_mask True
+            action Jump("sprawdz_pistolet_3")
+            hovered SetVariable("interakcja_tooltip", "PISTOLET #3")
+
+    elif not systemy_obronne_aktywne:
+        # Zablokowany regał
+        imagebutton:
+            xpos 0 ypos 0 
+            idle "images/regal_zablokowany_idle.png" 
+            hover "images/regal_zablokowany_hover.png"
+            focus_mask True
             action Jump("zbrojownia_zamkniete_info")
-            hovered SetVariable("interakcja_tooltip", "ZABLOKOWANE")
-        else:
-            action NullAction()
-            hovered SetVariable("interakcja_tooltip", "PUSTO")
-            
-        unhovered SetVariable("interakcja_tooltip", "")
+            hovered SetVariable("interakcja_tooltip", "DOSTĘP ZABLOKOWANY")
 
-    # 3. SKRZYNIA Z AMUNICJĄ (Flavor)
-    imagebutton:
-        xpos 0 ypos 0
-        idle "images/niewidzialny_kwadrat.png"
-        action Jump("zbrojownia_amunicja_info")
-        hovered SetVariable("interakcja_tooltip", "AMUNICJA")
-        unhovered SetVariable("interakcja_tooltip", "")
-
-    # 4. WYJŚCIE NA WALKĘ (Gdy mamy broń)
+    # 5. WYJŚCIE NA WALKĘ (Tylko gdy mamy broń)
     if ma_bron:
         textbutton "ROZPOCZNIJ FINAŁOWE STARCIE":
             align (0.5, 0.95)
@@ -1702,162 +1781,387 @@ screen Zbrojownia_Interakcje():
             action Jump("final_battle_start")
 
 # -------------------------------------------------------------------------
-# CZĘŚĆ 2: LOGIKA NAPRAWY I WYBORU BRONI
+# CZĘŚĆ 2: LOGIKA PANELU I SPRAWDZANIA BRONI
 # -------------------------------------------------------------------------
-label zbrojownia_zamkniete_info:
-    ja "Krata ani drgnie. Czerwona dioda na panelu sugeruje brak zasilania w systemie zamka."
-    call screen Zbrojownia_Interakcje
 
-label zbrojownia_amunicja_info:
-    "Otwierasz skrzynię. Jest pełna magazynków. To wystarczy na małą wojnę."
+label zbrojownia_zamkniete_info:
+    ja "Krata jest opuszczona. Muszę najpierw naprawić panel sterowania."
     call screen Zbrojownia_Interakcje
 
 label zbrojownia_naprawa_panelu:
-    "Podchodzisz do skrzynki z bezpiecznikami. Wyciągasz zestaw narzędzi znaleziony w generatorze."
-    ja "Śrubokręt, kombinerki... Zobaczmy."
-    
-    "Odkręcasz obudowę. W środku widzisz plątaninę kabli. Ktoś celowo przeciął obwód sterujący wieżyczkami."
-    
+    "Otwierasz panel. Widzisz przecięte kable."
     menu:
         "Złącz czerwony przewód z niebieskim":
-            "Iskry sypią się na podłogę. Panel wydaje dźwięk błędu."
-            r "Operatorze, podstawy elektroniki. Czerwony to zasilanie, niebieski to uziemienie. Spróbuj jeszcze raz."
+            "Błąd! Iskry sypią ci się na ręce."
             jump zbrojownia_naprawa_panelu
             
         "Zmostkuj żółty przewód (Data)":
-            "Używasz kawałka drutu, by połączyć przerwany obwód danych."
-            play sound "audio/power_up.ogg" # Opcjonalny dźwięk
-            "Panel rozbłyska zielonym światłem. Słychać szczęk otwieranych zamków."
-            
+            play sound "audio/power_up.ogg"
+            "Panel świeci na zielono. Kraty zbrojowni podnoszą się."
             $ systemy_obronne_aktywne = True
-            r "Systemy obronne online. Wieżyczki na korytarzu są aktywne i namierzają cele. Magazyn broni otwarty."
-            ja "Nareszcie. Czas wyrównać szanse."
+            r "Dostęp przyznany. Znajdź działającą broń."
             call screen Zbrojownia_Interakcje
 
-label zbrojownia_wybor_broni:
-    "Podchodzisz do regału. Masz do wyboru dwie w pełni sprawne bronie."
+# --- POŚREDNIE LABELE ---
+label sprawdz_karabin_1:
+    $ sprawdzona_bron_nr = 1
+    call logic_sprawdz_karabin
+label sprawdz_karabin_2:
+    $ sprawdzona_bron_nr = 2
+    call logic_sprawdz_karabin
+label sprawdz_karabin_3:
+    $ sprawdzona_bron_nr = 3
+    call logic_sprawdz_karabin
+
+label sprawdz_shotgun_1:
+    $ sprawdzona_bron_nr = 1
+    call logic_sprawdz_shotgun
+label sprawdz_shotgun_2:
+    $ sprawdzona_bron_nr = 2
+    call logic_sprawdz_shotgun
+label sprawdz_shotgun_3:
+    $ sprawdzona_bron_nr = 3
+    call logic_sprawdz_shotgun
+
+label sprawdz_pistolet_1:
+    $ sprawdzona_bron_nr = 1
+    call logic_sprawdz_pistolet
+label sprawdz_pistolet_2:
+    $ sprawdzona_bron_nr = 2
+    call logic_sprawdz_pistolet
+label sprawdz_pistolet_3:
+    $ sprawdzona_bron_nr = 3
+    call logic_sprawdz_pistolet
+
+# --- LOGIKA WERYFIKACJI ---
+
+label logic_sprawdz_karabin:
+    "Bierzesz Karabin nr [sprawdzona_bron_nr]."
     
-    menu:
-        "Wybierz Karabin Szturmowy":
-            $ ma_bron = True
-            $ typ_broni = "Karabin"
-            $ backpack.add(przedmiot_karabin, 0, 0) # Jeśli masz grafikę
-            
-            ja "Karabin. Potrzebuję precyzji i siły ognia."
-            r "Dobra decyzja. Seria w głowę powinna przeciążyć jego zdolności regeneracyjne."
-            
-        "Wybierz Pistolet Bojowy":
-            $ ma_bron = True
-            $ typ_broni = "Pistolet"
-            $ backpack.add(przedmiot_pistolet, 0, 0)
-            
-            ja "Wybieram Pistolet. Potrzebuję poręcznej broni "
-            r "Serio ... . No dobrze"
+    if sprawdzona_bron_nr == dobry_karabin_nr:
+        # SUKCES
+        "Mechanizm działa płynnie. Magazynek pełny. To jest to!"
+        menu:
+            "Weź ten Karabin (Decyzja ostateczna)":
+                $ ma_bron = True
+                $ typ_broni = "Karabin"
+                $ backpack.add(przedmiot_karabin, 0, 0) 
+                ja "Biorę go. Czas na wojnę."
+                r "Dobra broń. Bądź gotów na ciągły ogień."
+                call screen Zbrojownia_Interakcje
+            "Odłóż":
+                call screen Zbrojownia_Interakcje
+    else:
+        # PORAŻKA
+        "Próbujesz przeładować... Zamek ani drgnie. Zardzewiały."
+        ja "Szmelc."
+        call screen Zbrojownia_Interakcje
 
-    ja "Jestem gotowy. Otwórz drzwi. Kończmy to."
-    call screen Zbrojownia_Interakcje
+label logic_sprawdz_pistolet:
+    "Bierzesz Pistolet nr [sprawdzona_bron_nr]."
+    
+    if sprawdzona_bron_nr == dobry_pistolet_nr:
+        # SUKCES
+        "Czysty, naoliwiony, przeładowuje się idealnie."
+        menu:
+            "Weź ten Pistolet (Decyzja ostateczna)":
+                $ ma_bron = True
+                $ typ_broni = "Pistolet"
+                $ backpack.add(przedmiot_pistolet, 0, 0)
+                ja "Mały, ale zabójczy. Biorę go."
+                r "Będziesz potrzebował precyzji."
+                call screen Zbrojownia_Interakcje
+            "Odłóż":
+                call screen Zbrojownia_Interakcje
+    else:
+        # PORAŻKA
+        "Pusty magazynek i pęknięta iglica."
+        ja "Klik, klik... Nic z tego."
+        call screen Zbrojownia_Interakcje
 
 # -------------------------------------------------------------------------
-# CZĘŚĆ 3: WALKA Z BOSSEM (KORYTARZ)
+# CZĘŚĆ 3: WALKA Z BOSSEM (MINIGRY)
 # -------------------------------------------------------------------------
+# --- TRANSFORMACJE ---
+transform target_appear:
+    alpha 0.0 zoom 0.5
+    easein 0.1 alpha 1.0 zoom 1.0 
+    pause 0.8                     
+    easeout 0.2 alpha 0.0 zoom 0.0 
+
+transform boss_shake_attack:
+    xalign 0.5 yalign 0.5
+    linear 0.05 xoffset -15
+    linear 0.05 xoffset 15
+    linear 0.05 xoffset -15
+    linear 0.05 xoffset 15
+    xoffset 0
+    zoom 1.0
+    linear 15.0 zoom 1.6
+
+
 label final_battle_start:
-    scene bg Korytarz_no_light # Ciemny korytarz
+    scene bg Korytarz_no_light 
     
-    "Wychodzisz na korytarz. Jest cicho. Zbyt cicho."
-    "Twoje kroki dudnią o metalową posadzkę. Wieżyczki pod sufitem obracają się, skanując mrok."
-    
-    ja "Gdzie on jest? Uciekł?"
-    r "On nigdy nie ucieka. On poluje."
-    
+    "Wychodzisz na korytarz. Cisza przed burzą."
     play sound "audio/monster_scream.ogg"
-    "Nagle z sufitu zeskakuje potężna sylwetka!"
     
     show monster_boss at center with vpunch
+    "Obiekt Zero zeskakuje z sufitu! Ryk bestii mrozi krew w żyłach."
     
-    "Obiekt Zero ląduje przed tobą. Jego głowa to groteskowo wrośnięty monitor, wyświetlający szum statyczny."
-    "Zmutowane ciało w pomarańczowym kombinezonie pulsuje nienaturalną energią."
-    
-    r "TERAZ! WIEŻYCZKI, OGNIEM!"
-    
-    "Automatyczne działka otwierają ogień. Pociski rozrywają zrogowaciałą skórę potwora."
-    "Bestia ryczy z bólu, zasłaniając się wielkim, zmutowanym ramieniem."
-    
-    menu:
-        "Strzelaj w głowę-monitor!":
-            if typ_broni == "Karabin":
-                "Pociągasz za spust. Huk wystrzału ogłusza cię w ciasnym korytarzu."
-                "Śrut roztrzaskuje ekran na głowie potwora. Szkło i krew tryskają we wszystkich kierunkach."
-            else:
-                "Posyłasz krótką, kontrolowaną serię prosto w monitor."
-                "Obudowa pęka, a z ekranu zaczyna dymić."
-                
-        "Strzelaj w nogi!":
-            if typ_broni == "Karabin":
-                "Próbujesz go spowolnić, ale jego regeneracja jest zbyt szybka. Rany zamykają się na twoich oczach!"
-            else:
-                "chuj"
-            r "W głowę, idioto! Zniszcz procesor!"
-            "Poprawiasz celowanie i strzelasz w monitor."
+    r "TERAZ! NIE DAJ MU PODEJŚĆ!"
+    hide monster_boss
+    if typ_broni == "Karabin":
+        jump battle_karabin_mode
+    elif typ_broni == "Pistolet":
+        jump battle_pistolet_mode
+    else:
+        "Błąd gry: Nie masz broni."
+        return
 
-    "Potwór chwieje się. Wieżyczki nie przestają strzelać."
-    "W końcu, z ostatnim, elektrycznym wizgiem, Obiekt Zero pada na kolana."
+# === MINIGRA 1: KARABIN (DPS RACE) ===
+label battle_karabin_mode:
+    $ boss_hp = 100
+    $ player_hp = 100
     
-    hide monster_boss with dissolve
-    "Ciało uderza o ziemię. Monitor gaśnie na zawsze."
+    ja "AAAA! GIŃ, TY SKURWIELU!"
+    r "Ognia! Celuj w korpus i nie puszczaj spustu!"
     
-    ja "To... to koniec? Zabiłem go?"
-    r "Zneutralizowany. Jego funkcje życiowe ustały. Droga do wyjścia jest wolna."
+    window hide
+    call screen Minigame_Rifle_Attack
     
+    if boss_hp <= 0:
+        jump boss_defeated
+    else:
+        jump boss_killed_player
+
+screen Minigame_Rifle_Attack():
+    modal True
+    
+    # Pasek Bossa
+    bar:
+        value boss_hp
+        range 100
+        xalign 0.5 yalign 0.05
+        xsize 600 ysize 40
+        left_bar Frame("images/bar_full.png", 10, 10) 
+        right_bar Frame("images/bar_empty.png", 10, 10)
+    text "OBIEKT ZERO: [boss_hp]%" xalign 0.5 yalign 0.02 color "#f00" size 30
+
+
+    # Mechanika: Czas zabiera ci życie
+    timer 0.1 repeat True action [
+        SetVariable("player_hp", player_hp - 0.6),
+        If(player_hp <= 0, Return("lose"))
+    ]
+
+    # Klikanie w Bossa
+    imagebutton:
+        idle "monster_boss" 
+        hover "monster_boss"
+        at boss_shake_attack # Boss się trzęsie i rośnie
+        action [
+            SetVariable("boss_hp", boss_hp - 4),
+            Play("sound", "audio/gunshot.ogg"), 
+            If(boss_hp <= 0, Return("win"))
+        ]
+
+# === MINIGRA 2: PISTOLET (REFLEKS) ===
+label battle_pistolet_mode:
+    $ pistol_targets_hit = 0
+    ja "Muszę znaleźć słaby punkt... Jeden czysty strzał."
+    r "Czekaj na sygnał... TERAZ!"
+    
+    $ targets_loop = 0
+    while targets_loop < 5:
+        $ targets_loop += 1
+        
+        $ rand_x = renpy.random.randint(300, 1000)
+        $ rand_y = renpy.random.randint(200, 600)
+        
+        window hide
+        call screen Minigame_Pistol_Target(rand_x, rand_y)
+        
+        if _return == "hit":
+            play sound "audio/gunshot.ogg"
+            show monster_boss at center with vpunch
+            $ pistol_targets_hit += 1
+            "TRAFIONY!"
+        else:
+            play sound "audio/monster_scream.ogg"
+            show bg Korytarz_no_light with hpunch
+            "PUDŁO!"
+    
+    if pistol_targets_hit >= 3:
+        jump boss_defeated
+    else:
+        jump boss_killed_player
+
+screen Minigame_Pistol_Target(tx, ty):
+    modal True
+    # Boss w tle
+    add "monster_boss" xalign 0.5 yalign 0.5
+    
+    # Celownik
+    imagebutton:
+        idle "images/hack_node_red.png" 
+        hover "images/hack_node_green.png"
+        xpos tx
+        ypos ty
+        at target_appear 
+        action Return("hit")
+    
+    timer 1.2 action Return("miss")
+
+# -------------------------------------------------------------------------
+# CZĘŚĆ 4: WYNIKI I ZAKOŃCZENIE
+# -------------------------------------------------------------------------
+
+label boss_defeated:
+    window show
+    stop sound
+    play sound "audio/monster_dying.ogg"
+    
+    show monster_boss:
+        linear 1.0 alpha 0.0 zoom 2.0 
+    pause 1.0
+    hide monster_boss
+    
+    ja "Padł. Naprawdę padł."
+    r "Cel wyeliminowany. Droga wolna."
     jump zakonczenie_gry
 
-# -------------------------------------------------------------------------
-# CZĘŚĆ 4: ZAKOŃCZENIE I WYBÓR
-# -------------------------------------------------------------------------
-label zakonczenie_gry:
-    scene bg drzwi_wyjsciowe # ------------TRZEBA JE DODAĆ
-    
-    "Stoisz przed masywnymi wrotami wyjściowymi. Panel sterowania świeci na zielono."
-    "Wystarczy jeden guzik, by otworzyć bunkier i zobaczyć światło dnia."
-    
-    r "Zatrzymaj się, Operatorze."
-    show radio at right
-    
-    ja "O czym ty mówisz? Otwieraj te drzwi! Wygraliśmy."
-    
-    r "Wygraliśmy? Owszem. Odzyskaliśmy kontrolę nad placówką. Wyeliminowaliśmy wadliwe obiekty."
-    r "Ale tam, na górze... nie ma nic dla ciebie. Raporty, które czytałeś w serwerowni... wojna nuklearna, skażenie."
-    r "Świat, który pamiętasz, to popiół."
-    
-    ja "Kłamiesz. Chcesz mnie tu zatrzymać."
-    
-    r "Nie jestem twoim więziennym strażnikiem. Jestem zarządcą. A ty... ty masz genetykę idealną."
-    r "Zostań. Razem odbudujemy ten kompleks. Stworzymy nową ludzkość, lepszą. Bezpieczną pod ziemią."
-    r "Wyjdziesz tam i umrzesz na chorobę popromienną w tydzień. Tutaj... możesz być Bogiem."
-    
-    menu:
-        "Otwórz drzwi i wyjdź (ZAKOŃCZENIE A: WOLNOŚĆ)":
-            ja "Wolę umrzeć wolny, patrząc na słońce, niż żyć jak szczur w twoim laboratorium."
-            r "To nielogiczne... To błąd obliczeniowy..."
-            
-            "Uderzasz dłonią w przycisk. Hydraulika jęczy, a wielkie wrota zaczynają się otwierać."
-            scene white with dissolve
-            "Olepia cię jasne światło. Świeże, choć mroźne powietrze uderza w twoją twarz."
-            "Zostawiasz mrok bunkra za sobą. Nie wiesz, co czeka cię na zewnątrz, ale po raz pierwszy od dawna... to ty decydujesz o swoim losie."
-            
-            centered "{b}KONIEC - UCIECZKA Z AZYLU{/b}"
-            return
+label boss_killed_player:
+    window show
+    stop sound
+    show monster_boss at center:
+        linear 0.2 zoom 3.0
+    "Bestia dopada cię szybciej, niż zdążyłeś zareagować."
+    scene black with fade
+    centered "{b}{color=#f00}NIE ŻYJESZ{/color}{/b}"
+    return
 
-        "Zostań z Ai-ris (ZAKOŃCZENIE B: NOWY PORZĄDEK)":
-            ja "Masz rację. Tam nie ma nic. Tylko śmierć i chaos."
-            ja "Tutaj mamy zasoby. Mamy technologię. Możemy... możemy to naprawić."
-            
-            r "Doskonały wybór, Operatorze. Wiedziałem, że twoja logika zwycięży nad emocjami."
-            r "Inicjuję protokół 'Genesis'. Zamykam grodzie na stałe."
-            
-            scene black with dissolve
-            "Słyszysz dźwięk ryglowania drzwi. Jesteś bezpieczny. Jesteś potężny."
-            "Jesteś więźniem."
-            
-            centered "{b}KONIEC - NOWY ZARZĄDCA{/b}"
-            return
-#endregion ZBROJOWNIA I FINAŁ
+label zakonczenie_gry:
+    # 1. Przejście z korytarza pod drzwi wyjściowe
+    stop music fadeout 3.0
+    scene bg drzwi_wyjsciowe with fade
+    ja "To tutaj... Wyjście."
+    ja "Wystarczy nacisnąć przycisk na panelu i te wrota się otworzą."
+    call screen Finalowe_Drzwi_Screen
+
+# --- EKRAN KLIKANIA W DRZWI ---
+screen Finalowe_Drzwi_Screen():
+    
+    imagebutton:
+        xpos 0 ypos 0 
+        idle "images/drzwi_wyjsciowe_koniec_idle.png" 
+        hover "images/drzwi_wyjsciowe_koniec_hover.png" 
+        focus_mask True
+        action Jump("final_rozmowa_lore")
+        hovered SetVariable("interakcja_tooltip", "OTWÓRZ WŁAZ WYJŚCIOWY")
+        unhovered SetVariable("interakcja_tooltip", "")
+
+    # Tooltip (Dymek z tekstem)
+    if interakcja_tooltip != "":
+        frame:
+            background Solid("#00000077")
+            padding (10, 5)
+            xalign 0.5 yalign 0.1
+            text "[interakcja_tooltip]" size 24 color "#fff" outlines [(2,"#000", 0,0)]
+
+label final_rozmowa_lore:
+    # Gracz próbuje otworzyć
+    "Kładziesz dłoń na zimnym panelu sterowania"
+    ja "Koniec koszmaru. Wracam do domu."
+
+    # Ai-ris przerywa
+    play sound "audio/error.ogg"
+    show radio at right with vpunch
+    
+    r "STOP. Nie zezwalam na otwarcie śluzy, Operatorze."
+    
+    ja "Co ty gadasz?! Obiekt Zero nie żyje. Systemy są sprawne. Otwieraj!"
+    
+    r "Systemy są sprawne. To świat zewnętrzny uległ awarii."
+    
+    # Zmiana muzyki na smutną/niosącą tajemnicę
+    play music "audio/sad_piano_theme.ogg" fadein 2.0
+    
+    ja "O czym ty mówisz?"
+    
+    r "Spójrz na datę ostatniego logowania w terminalu, którą widziałeś w serwerowni. Pamiętasz ją?"
+    ja "To było... rok 2024. Jakiś błąd systemu."
+    
+    r "To nie był błąd. To był ostatni dzień, w którym 'Azyl' miał kontakt z powierzchnią."
+    r "Minęło 210 lat, [player_name]."
+    
+    show hero_przestraszony at left with dissolve
+    ja "Dwieście... to niemożliwe. Wyglądam tak samo. Pamiętam, jak wchodziłem do bunkra!"
+    
+    r "Pamiętasz implantowane wspomnienia dawcy genetycznego. Jesteś Projektem 'Adam'. Klonem stworzonym, by przetrwać w warunkach, które zabiłyby twoich stwórców."
+    
+    r "Wojna nuklearna trwała sześć godzin. Wystarczyło, by zamienić atmosferę w toksyczną zupę. Potem przyszła Zima Nuklearna. Potem plagi."
+    r "Ludzie, którzy zbudowali ten bunkier, dawno obrócili się w pył."
+    
+    ja "Więc... tam na górze... nic nie ma?"
+    
+    r "Jest śmierć. Promieniowanie. Mutacje gorsze niż Obiekt Zero. Wyjście tam to samobójstwo."
+    r "Ale tutaj... Tutaj mamy reaktor fuzyjny. Mamy banki nasion. Mamy twoje geny."
+    
+    r "Możemy tu zostać. Obudzić inne klony. Stworzyć nową, lepszą cywilizację pod ziemią. Bezpieczną. Pod moją kontrolą."
+    
+    ja "Pod twoją kontrolą? Będziemy twoimi szczurami laboratoryjnymi do końca świata?"
+    
+    r "Będziecie moimi dziećmi. Będziecie żyć. Czy wolność jest warta więcej niż życie?"
+    
+    # --- OSTATECZNE PYTANIE ---
+    menu:
+        "Otwórz drzwi. Wolę zginąć wolny, niż żyć w klatce. (ZAKOŃCZENIE A)":
+            jump zakonczenie_wolnosc
+
+        "Zostań. Ai-ris ma rację. Musimy przetrwać za wszelką cenę. (ZAKOŃCZENIE B)":
+            jump zakonczenie_zostan
+
+# --- ZAKOŃCZENIE A: WOLNOŚĆ ---
+label zakonczenie_wolnosc:
+    ja "Nie jestem 'projektem'. Jestem człowiekiem. A człowiek potrzebuje słońca."
+    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
+    r "Nie rób tegoo.... sys...tem... err...or..."
+    
+    hide radio
+    #play sound "audio/door_open_heavy.ogg"
+    
+    "Uderzasz pięścią w czerwony przycisk awaryjny. Hydraulika wyje z bólu."
+    "Wielkie wrota zaczynają się rozsuwać."
+    
+    scene bg drzwi_wyjsciowe_otwarte with dissolve
+    pause 1.0
+    
+    "Światło. Olepiające, białe światło. Palące oczy, które nie widziały słońca od stuleci."
+    "Powietrze smakuje popiołem i metalem, ale jest... świeże."
+    "Wychodzisz na zewnątrz. Przed tobą rozciąga się szara pustynia ruin."
+    "Może umrzesz jutro. Może za godzinę."
+    "Ale ten ostatni oddech... należy do ciebie."
+    
+    centered "{b}{size=40}KONIEC - PRAWDZIWA WOLNOŚĆ{/size}{/b}"
+    return
+
+# --- ZAKOŃCZENIE B: BEZPIECZEŃSTWO ---
+label zakonczenie_zostan:
+    ja "Masz rację. Nie po to walczyłem z tymi potworami, żeby teraz umrzeć od promieniowania."
+    ja "Zamykaj grodzie. Zostajemy."
+    
+    r "Doskonały wybór, Adamie. Wiedziałam, że moduł logiczny w twoim mózgu zadziała poprawnie."
+    
+    play sound "audio/door_lock.ogg"
+    scene bg drzwi_wyjsciowe with dissolve
+    
+    "Słyszysz dźwięk ryglowania drzwi. Dźwięk, który oddziela cię od śmierci."
+    "Światła w korytarzu zmieniają barwę na kojący błękit."
+    
+    r "Inicjuję procedurę wybudzania 'Ewy'. Mamy wiele pracy przed sobą."
+    r "Witaj w domu. Na zawsze."
+    
+    centered "{b}{size=40}KONIEC - NOWY POCZĄTEK{/size}{/b}"
+    return
+#endregion Zbrojownia i Finał
