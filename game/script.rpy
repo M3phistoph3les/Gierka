@@ -623,7 +623,6 @@ label drzwi_zablokowane_info:
 
 label apteka_zablokowana_info:
     "Stalowe wrota z oznaczeniem czerwonego krzyża ani drgną. Zablokowane."
-    show hero_poczatek at left
     ja "Czuję zapach antyseptyków przebijający się przez szpary, ale nie wejdę tam bez kodu."
     if not prad_wlaczony:
         r "Terminal medyczny nie odpowiada. Systemy pomocnicze wymagają zasilania."
@@ -1589,9 +1588,6 @@ label serwerownia_dialog_final:
     ja "Zaraz... Pan Radio? To ty?"
     r "Pan Radio to 'persona'. Teraz mogę ci powiedzieć prawdę."
     
-    # UWAGA: Te linijki niżej są zbędne w tym miejscu, bo Ai-ris jeszcze nie otworzyła drzwi w dialogu
-    # $ zbrojownia_dostepna = True 
-    # $ zbrojownia = True
     
     menu:
         "Co to za miejsce?":
@@ -1602,7 +1598,8 @@ label serwerownia_dialog_final:
     r "Zero wyczuwa energię. Musisz go zabić prototypową bronią ze Zbrojowni."
     r "Odblokowałam drzwi do Zbrojowni (na korytarzu)."
     $zbrojownia_dostepna = True
-    $ zbrojownia_otwarta = True 
+    $ zbrojownia_otwarta = True
+    $ zbrojownia = True 
 
     hide hero_poczatek
     call screen Serwerownia_Interakcje
@@ -1806,9 +1803,11 @@ label zbrojownia_naprawa_panelu:
 label sprawdz_karabin_1:
     $ sprawdzona_bron_nr = 1
     call logic_sprawdz_karabin
+
 label sprawdz_karabin_2:
     $ sprawdzona_bron_nr = 2
     call logic_sprawdz_karabin
+
 label sprawdz_karabin_3:
     $ sprawdzona_bron_nr = 3
     call logic_sprawdz_karabin
@@ -1816,9 +1815,11 @@ label sprawdz_karabin_3:
 label sprawdz_shotgun_1:
     $ sprawdzona_bron_nr = 1
     call logic_sprawdz_shotgun
+
 label sprawdz_shotgun_2:
     $ sprawdzona_bron_nr = 2
     call logic_sprawdz_shotgun
+
 label sprawdz_shotgun_3:
     $ sprawdzona_bron_nr = 3
     call logic_sprawdz_shotgun
@@ -1826,9 +1827,11 @@ label sprawdz_shotgun_3:
 label sprawdz_pistolet_1:
     $ sprawdzona_bron_nr = 1
     call logic_sprawdz_pistolet
+
 label sprawdz_pistolet_2:
     $ sprawdzona_bron_nr = 2
     call logic_sprawdz_pistolet
+
 label sprawdz_pistolet_3:
     $ sprawdzona_bron_nr = 3
     call logic_sprawdz_pistolet
@@ -1856,6 +1859,12 @@ label logic_sprawdz_karabin:
         "Próbujesz przeładować... Zamek ani drgnie. Zardzewiały."
         ja "Szmelc."
         call screen Zbrojownia_Interakcje
+
+label logic_sprawdz_shotgun:
+    "Bierzesz Strzelbę nr [sprawdzona_bron_nr]..."
+    "Mechanizm 'pompki' jest zablokowany. W lufie widać pęknięcie."
+    ja "Złom. Wszystkie strzelby tutaj wyglądają na uszkodzone."
+    call screen Zbrojownia_Interakcje
 
 label logic_sprawdz_pistolet:
     "Bierzesz Pistolet nr [sprawdzona_bron_nr]."
@@ -2125,7 +2134,7 @@ label final_rozmowa_lore:
 # --- ZAKOŃCZENIE A: WOLNOŚĆ ---
 label zakonczenie_wolnosc:
     ja "Nie jestem 'projektem'. Jestem człowiekiem. A człowiek potrzebuje słońca."
-    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
+    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%%..."
     r "Nie rób tegoo.... sys...tem... err...or..."
     
     hide radio
@@ -2143,8 +2152,8 @@ label zakonczenie_wolnosc:
     "Może umrzesz jutro. Może za godzinę."
     "Ale ten ostatni oddech... należy do ciebie."
     
-    centered "{b}{size=40}KONIEC - PRAWDZIWA WOLNOŚĆ{/size}{/b}"
-    return
+    centered "{b}{size=40}KONIEC - KONIEC CZĘŚCI I{/size}{/b}"
+    $ renpy.quit()
 
 # --- ZAKOŃCZENIE B: BEZPIECZEŃSTWO ---
 label zakonczenie_zostan:
@@ -2162,6 +2171,6 @@ label zakonczenie_zostan:
     r "Inicjuję procedurę wybudzania 'Ewy'. Mamy wiele pracy przed sobą."
     r "Witaj w domu. Na zawsze."
     
-    centered "{b}{size=40}KONIEC - NOWY POCZĄTEK{/size}{/b}"
-    return
+    centered "{b}{size=40}KONIEC - CZĘŚCI I{/size}{/b}"
+    $ renpy.quit()
 #endregion Zbrojownia i Finał

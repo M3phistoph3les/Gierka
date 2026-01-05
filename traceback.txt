@@ -1,26 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1834, in script call
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1829, in script call
     call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1828, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1831, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 2128, in script
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1809, in script call
+    call logic_sprawdz_karabin
+  File "game/script.rpy", line 1813, in script call
+    call logic_sprawdz_karabin
+  File "game/script.rpy", line 2137, in script
     r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
 ValueError: unsupported format character '.' (0x2e) at index 51
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 1834, in script call
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1829, in script call
     call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1828, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 1831, in script call
-    call logic_sprawdz_pistolet
-  File "game/script.rpy", line 2128, in script
+  File "game/script.rpy", line 1821, in script call
+    call logic_sprawdz_shotgun
+  File "game/script.rpy", line 1809, in script call
+    call logic_sprawdz_karabin
+  File "game/script.rpy", line 1813, in script call
+    call logic_sprawdz_karabin
+  File "game/script.rpy", line 2137, in script
     r "To nielogiczne... Szansa na przeżycie wynosi 0.00%..."
   File "renpy/ast.py", line 2915, in execute
     Say.execute(self)
@@ -36,4 +48,4 @@ ValueError: unsupported format character '.' (0x2e) at index 51
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.4.1.25072401
 PROJEKT ARKA 
-Mon Jan  5 17:27:08 2026
+Mon Jan  5 17:47:04 2026
