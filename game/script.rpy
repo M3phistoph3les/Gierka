@@ -91,6 +91,7 @@ image bg stolik_zblizenie_bg = "stolik_zblizenie" # Twoje tło zbliżenia na st�
 image monster_boss = "unnamed" # Potwór z głową TV
 image bg apteczka_zblizenie = "apteczka_zblizenie_no"   ######DODAĆ
 image bg apteczka_zblizenie_pront = "apteczka_zblizenie"
+image monster_boss_zdech = "unnamed_umar"
 
 label start:  
 #region START 
@@ -2104,9 +2105,13 @@ label boss_defeated:
         linear 1.0 alpha 0.0 zoom 2.0 
     pause 1.0
     hide monster_boss
-    
+   
+    show unnamed_umar at center:
+        yalign 0.85
     ja "Padł. Naprawdę padł."
     r "Cel wyeliminowany. Droga wolna."
+    hide unnamed_umar
+
     jump zakonczenie_gry
 
 label boss_killed_player:
@@ -2117,7 +2122,7 @@ label boss_killed_player:
     "Bestia dopada cię szybciej, niż zdążyłeś zareagować."
     scene black with fade
     centered "{b}{color=#f00}NIE ŻYJESZ{/color}{/b}"
-    return
+    $ renpy.quit()
 
 label zakonczenie_gry:
     # 1. Przejście z korytarza pod drzwi wyjściowe
