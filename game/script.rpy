@@ -97,128 +97,188 @@ label start:
 #region START 
 #endregion START
     label początek_gry:
-
-        "Otula Cię aksamitna ciemność ze wszystkich stron..."
-        "Nie czujesz ciężaru myśli i wspomień, a czas zdaje się stać w miejscu"
-        "Czujesz się po prostu bezpiecznie, chyba pierwszy raz od bardzo, bardzo dawna"
-        "Chyba nie jesteś pewny od jak dawna"
-        "..."
-        "Zaczynasz czuć delikatnie przenikający niepokój"
-        "Jakby przez ciemność przesiąkało obezwładniające drętwienie"
-        "Narasta..."
-        "Robi się cieższe..."
-        "Coraz cięższe..."
-        "Ołowiany chłód zaczyna pełzać od opuszków Twoich palców"
-        "Coraz głębiej..."
-        "Coraz szybciej..."
-        "Wartkie strumienie bólu uderzają intensywnie w podstawę Twojej czaszki"
-        "..."
-        "Jest źle"
-        "Jest cholernie źle!"
-        "Leżysz na twardym materacu, który cuchnie potem i stęchlizną"
-        "Próbujesz otworzyć oczy, ale powieki odmawiają Ci poszłuszeństwa"
-        "Jakby za wszelką cenę chciały Cię bronić przed tym, co się kryje po drugiej stronie"
-        "Spierzchniętymi ustami wyczuwasz metaliczny posmak"
-        "Narastający zapach omszałych betonowych ścian zdaje się być przesiąknięty ostrą wonią czegoś, przez co czujesz gęsią skórkę"
-        "Drżąc próbujesz się podnieść, tocząc dalej walkę z ociężałymi powiekami."
-        "Czujesz przyśpieszony rytm serca, zimne żyły i tętnice zaczynają pulsować wrzącą krwią"
-        "Powieki w końcu ustępują Twojej silnej woli, a Ty tak gwałtownie siadasz na brzegu łóżka, że aż zakręciło Ci się w głowie."
+        # play music "audio/sleeep.ogg" fadein 2.0
+        "Ciemność. Absolutna, aksamitna ciemność."
+        "Nie czujesz ciężaru ciała ani upływu czasu, jest bezpiecznie?"
+        "Nagle pojawia się niepokój. Ołowiany chłód przenika od opuszków palców w górę ramion."
+        "Ból. Nagły i ostry, jest źle. Jest cholernie źle."
+        "Leżysz na czymś twardym. Śmierdzi potem i stęchlizną."
+        "Powieki ważą tonę. Walczysz z nimi, czując w ustach metaliczny posmak krwi."
+        "Zrywasz się. Gwałtownie siadasz na brzegu łóżka. Świat wiruje."
 
         scene black with dissolve
+
+        #zakończenie muzy sleep
         stop music fadeout 2.0
         
-        "Tępy puls w czaszce nie ustaje. Czujesz się, jakbyś spał dekadę... albo minutę."
-        "Twoje mięśnie drżą w niekontrolowanych spazmach. Jesteś słaby. Żałośnie słaby."
+        "..."
         
         scene bg PokojStartowy with fade
         
-        "Półmrok. Zarysy obcych mebli. Beton. Rdza."
-        "Zewsząd dobiega trzeszczący dźwięk. Głos. Dobiega ze ścian, z sufitu, z wnętrza twojej głowy."
-        
-        "???" "Haloo... Odbiór...? Czy ten zlepek biomasy raczy wreszcie nawiązać połączenie?"
-        
+        "Surowy beton, rdza i pajęczyny."
+        "Zardzewiałe łóżko blokuje drzwi. Wygląda na to, że próbowałeś się tu zabarykadować... przed czymś?"
+        "Wszystko tutaj krzyczy, że nie powinieneś tu być."
+
+        # play music "audio/trzask.ogg" fadein 2.0
+        "Nagle głośny dzwięk trzasków interkomu rozlał się po całym pomieszczeniu. Instynktownie zakrywasz uszy mając w nadziei że nie rozsadzi Ci głowy."
+        "HaLoo...?!"
+        "OdBiÓr...?"
+        "'Odezwij się! Przecież wiem, ZzZzżee tam jesteś!'"
+        # KONIEC DZWIEKU TRZASK
+        # stop music fadeout 2.0
+
         show radio at right with easeinright
-        r  "Witamy w świecie żywych. Jestem Pan Radio. Twój nadzorca, przewodnik i... jedyny powód, dla którego jeszcze oddychasz."
-        
-        show hero_poczatek at left with dissolve
+        r "O, wreszcie. Sygnał czysty. Witamy w świecie żywych."
+        "Głos jest nienaturalny, syntetyczny, kompletnie niezrozumiały."
+        show hero_poczatek at left with easeinleft
+        ja "Kim jesteś?"
+        r  "Hmmm, nic nie pamiętasz?"
+        r "Cóż, w takim razie gdzie moje maniery." 
+        r  "Nazywam się Pan Radio i jestem nadzorcą tego uroczego ośrodka."
+        r "Albo raczej tego, co z niego zostało."
+        r "I jak się pewnie domyślasz od teraz będę Twoim przewodnikiem."
+        hide radio
+        hide hero_poczatek
+
+        "Pan Radio?" 
+        "Zupełnie nic Ci to nie mówi."
         
         menu:
-            "Gdzie ja jestem?!":
-                ja "Co to za miejsce?! Kim ty jesteś?! Mów, albo rozwalę te głośniki!"
-                r "Imponująca wola życia. Szkoda, że marnowana na puste groźby."
-                r "Znajdujesz się w Placówce Badawczej Azyl. Albo raczej w tym, co z niej zostało."
-
-            "Kim jesteś?":
-                ja "Zidentyfikuj się. I powiedz, dlaczego mnie więzisz."
-                r "Konkretny. To lubię. Oszczędza nam obu czasu procesora."
-                r "Więzisz? To mocne słowo. Powiedzmy, że 'przechowuję'. Jestem Pan Radio."
-
-            "... (Milczenie)":
+            #1 Opcja
+            "Zapytaj groźnie Kim naprawdę jest?":
+                show hero_wkurw at left
+                ja "Zapytam po raz ostatni i najlepiej będzie jak odpowiesz, bo inaczej..."
+                ja "KIM DO CHOLERY JESTEŚ i CO TO ZA MIEJSCE?!"
+                show radio at right
+                r "..."
+                r "Odpuść sobie puste groźby."
+                r "Po pierwsze - nic mi nie możesz zrobić."
+                r "A po drugie - Chyba nie rozumiesz powagi sytuacji, w której się znajdujesz."
+                r "I po trzecie - Nazywam się Pan Radio."
+                ja "Nie jesteś niczym więcej niż kawałkiem złomu."
+                hide hero_wkurw
+                hide radio
+                "Pan Radio milczy. Słyszysz tylko słabe trzaski z głośnika."
+            #2 Opcja
+            "Zapytaj łagodnie Kim naprawdę jest i dlaczego Cię tu więźi?":
+                show hero_podstawowy at left
+                ja "Zapytam jeszcze raz - kim jesteś?"
+                show radio at right
+                r "A ja odpowiem po raz drugi - Jestem Pan Radio i zarządzam tym, co zostało z tego ośrodka."
+                r "Z Twoją pamięcią chyba jest coś nie tak skoro muszę Ci to przypominać."
+                ja "Dobrze, Panie Radio - w takim razie dlaczego mnie tutaj więzisz?"
+                r "Ależ ja Ciebie nie więżę! Bardziej adekwatnym określeniem będzie PRZECHOWUJĘ."
+                hide hero_podstawowy
+                hide radio
+                "Czujesz niepokój na dźwięk słowa 'PRZECHOWUJĘ'"
+            #3 Opcja
+            " Milcz":
+                "Milczysz"
+                show hero_poczatek at left
                 ja "..."
-                r "Katatonia? Nie... widzę, że twoje źrenice reagują. Obserwujesz."
-                r "To dobrze. Obserwacja to pierwszy krok do przetrwania."
+                show radio at right
+                r "Myślałem że będziesz miał mnóstwo pytań."
+                r  "..."
+                r "No dobrze, jak chcesz."
+                hide hero_poczatek
+                hide radio
         
-            r "Widzę drobne uszkodzenia w sektorze pamięci długotrwałej. Procedura wybudzania była... nieco brutalna."
+        show radio at right
+        r "Widzę, że nie czujesz się najlepiej."
+        r "Interesujące."
+        r "Dla mnie to jest normalne. Nazywają to reset systemu..."
+        r "Dla Ciebie? Fakt, że budzisz się z amnezją musi być szokujący."
+        r "A teraz przejdźmy do rzeczy..."
+        hide radio
+
         label Choice:   
         menu:
             " "
             #Opcja 1
-            "Czego ode mnie chcesz?":
+            "Zapytaj agresywnie, czego od Ciebie chce?":
                 $ zaufanie_ai -= 1 
-                hide hero_poczatek
                 show hero_wkurw at left
-                ja "Dość tych gierek. Czego chcesz?"
-                 
+                ja "Skończ te GIERKI i teraz - W TYM MOMENCIE powiedz czego do cholery chcesz?!"
+                show radio at right                 
+                r "Zachowujesz się jak szczur zamknięty w klatce. To interesujące."
+                r "Może jeszcze tego nie rozumiesz, ale nic nie możesz mi zrobić."
+                r "Za to ja mogę wyłączyć filtry ośrodka, odciąć zasilanie cyrkulacji powietrza i tym sprawić, że będziesz potulnie błagał żebym przestał."
+                "Ton metalicznego głosu Pana Radio wydaje się być mrożąco zimny. Jak bezwzględna maszyna."
+                r "W każdej chwili mogę Ciebie po prostu UNICESTWIĆ!"
                 hide hero_wkurw
-                show hero_podstawowy at left
-                 
-                r "Adrenalina w górę. Kortyzol w górę. Fascynujące, jak łatwo tobą sterować, [player_name]."
-                r "Jestem Bogiem tego betonowego pudełka. Nie irytuj bóstwa, bo odetnie tlen."
+                hide radio
             #Opcja 2   
-            "(Rozglądaj się w milczeniu)":  
+            "Rozejrzyj się w milczeniu":  
                 $ zaufanie_ai += 1 
+                show hero_poczatek at left
                 ja "..."
-                "Ignorujesz głos. Szukasz wyjścia. Głośniki są ukryte za kratownicami. Brak widocznych kamer, ale czujesz na sobie wzrok."
-                 
                 hide hero_poczatek
-                show hero_podstawowy at left
-                 
-                r "Ignorancja czy skupienie? Mam nadzieję, że to drugie. W przeciwnym razie szybko staniesz się statystyką."
-                r "Jestem Pan Radio. I radzę słuchać moich audycji."
+                "Rozglądasz się po pomieszczeniu ignorując słowa Pana Radio."
+                "Nie widzisz kamer..."
+                "Ale..."
+                "Nie możesz oprzeć się wrażeniu, że jesteś obserwowany"
+                show radio at right
+                r "Doskonale!"
+                r "Milcz i słuchaj!"
+                r "Jestem Pan Radio I radzę abyś słuchał."
+                hide radio
 
             #Opcja 3
-            "Jesteś tylko zardzewiałym głośnikiem.":
-                ja "Dużo gadasz jak na kawałek złomu przykręcony do ściany."
-                r "Zuchwałość. Cecha rzadka u obiektów testowych. Zwykle kończycie skomląc w kącie o mamę."
-                r "Doceniam jednak iskrę buntu. Nawet jeśli jest bezcelowa."
+            "Powiedz, że za dużo gada":
+                show hero_wkurw at left
+                ja "Dużo gadasz jak na trzęsący się kawał złomu."
+                show radio at right
+                r "..."
+                r "Możemy się przekonać, czy będziesz taki dowcipny po odcięciu powietrza."
+                r "Więc milcz i słuchaj, co Pan Radio ma Ci do powiedzenia!"
+                hide hero_wkurw
+                hide radio
+        show radio at right
+        r "Sytuacja jest prosta: nudzę się, systemy padają, a ty jesteś jedynym, co się rusza."
+        r "Jesteś obiektem testowym WZ-2137. Ale żebyś poczuł się lepiej, możemy używać imienia."
+        r "Pamiętasz je chociaż?"
+        hide radio
 
-        r "Sytuacja jest prosta: drzwi są zaryglowane, systemy podtrzymywania życia zdychają, a ja się nudzę. Wyjdź stąd, albo stań się częścią wystroju wnętrz."
-        r "A właśnie... jak cię oznaczono w rejestrze wsadowym?"
-        
-        $ player_name = renpy.input("Wpisz identyfikator (imię): ", length=15).strip()
+        $ player_name = renpy.input("Wpisz swoje imię: ", length=15).strip()
         if player_name == "":
             $ player_name = "Nieznajomy"
-            
-        ja "Nazywam się... [player_name]. Tak mi się wydaje."
-        ja "Jak mam się stąd wydostać?"
-        
-        r "Eksploruj. Improwizuj. Szukaj błędów w systemie. I postaraj się nie dać zjeść."
-        hide radio     
-        ja "Zjeść?! Co tu jeszcze jest oprócz nas?!"
-        
+
+        show  hero_podstawowy at left
+        ja "Nazywam się [player_name]. I nie jestem Twoją zabawką."
+        show radio at right
         hide hero_podstawowy
-        "Odpowiedzią jest dźwięk gasnących turbin. Generatory umierają. Światła zaczynają mrugać spazmatycznie, by po chwili zgasnąć całkowicie."
+        r "Jesteś tym, czym powiem, że jesteś, [player_name]. A teraz rusz się."
+        r "Drzwi są zablokowane, a poziom toksyn w powietrzu rośnie. Sugeruję improwizację."
+        show hero_wystraszony2 at left
+        ja "Toksyn?! I co tu jeszcze jest oprócz nas?!"
+        r "O, mnóstwo rzeczy. Poprzedni lokatorzy byli bardzo zaradni... dopóki coś ich nie zjadło."
+        r "Powodzenia w grze 'Nie daj się pożreć'!"
+        hide radio     
+        ja "Zjadło?! Halo! Wracaj tu!"
+        hide hero_wystraszony2
+
+        # play music "audio/generator_wylacza_sie_i_gasno_swiatla.ogg" fadein 2.0  
+        hide hero_podstawowy
+        "Gasną światła i zamiera odgłos pracujących z dala turbin generatora."
+        "Nastała cisza"
+        "Niepokojąca cisza..."
+        # stop music fadeout 2.0
 
 #-----------------Tło się zmienia na brak światła---------
         scene bg PokojStartowybezswiatla
         show hero_wkurw at left
         ja "Świetnie jeszcze tego brakowało.."
         hide hero_wkurw
+        show radio at right with easeinright
+        r "Proponuje rozejrzeć się i znaleść coś użytecznego"
+        hide radio
+        "Rozglądasz się, ale brakuje czegoś, co imitowałoby światło"
         show screen plecak_ikona 
         
         # Wywołanie ekranu z zagadkami
         call screen Pokój_startowy_zagadka
 #region CELA
+
 
 screen Pokój_startowy_zagadka():
     if interakcja_tooltip != "":
@@ -326,8 +386,8 @@ screen pod_lozkiem_zoom():
 #endregion Pokoj startowy
 
 label brak_swiatla_pod_lozkiem:
-    "Kluczasz dłonią w gęstym mroku pod ramą łóżka, ale czujesz tylko zimny beton i kurz."
-    show hero_poczatek at left
+    "Sięgasz dłonią w gęstym mroku pod ramą łóżka, ale czujesz tylko zimny beton i kurz."
+    show hero_poczatek
     ja "Nic nie widzę. Jest tu zbyt ciemno, żebym mógł cokolwiek znaleźć..."
     ja "Muszę najpierw jakoś oświetlić ten kąt."
     hide hero_poczatek
@@ -337,13 +397,16 @@ label akcja_zabrania_lomu:
     $ ma_lom = True
     $ backpack.add (przedmiot_lom,0, 0)
     "Twoje dłonie zaciskają się na zimnej, stalowej sztabie. Solidny łom."
+    show hero_podstawowy
     ja "Może uda mi się nim wyważyć drzwi."
+    hide hero_podstawowy
     call screen Pokój_startowy_zagadka
 #akcja Latarka
 label akcja_zabrania_latarki:
     $ ma_latarke = True
     $ backpack.add (przedmiot_latarka,0, 0)
     "Podniosłeś latarkę"
+    ja "Świetnie, przyda mi się w tym obskurnym miejscu."
     call screen Pokój_startowy_zagadka
 #akcja Drzwi
 label Otwórz_drzwi:
@@ -361,7 +424,7 @@ label Otwórz_drzwi:
         call screen Pokój_startowy_zagadka
     else:
         "Wbijasz łom w szczelinę. Metal zgrzyta przeraźliwie, aż w końcu zamek pęka z głośnym trzaskiem."
-        show hero_szczesliwy at left
+        show hero_szczesliwy 
         ja "Droga wolna. Zamek i tak był ledwo żywy."
         hide hero_szczesliwy
         $ drzwi_cela_wywalone = True
@@ -369,9 +432,10 @@ label Otwórz_drzwi:
 #akcja Zaglądania pod łóżko            
 label Zajrzyj_pod_łóżko:  
     "W świetle latarki dostrzegasz wyschnięte truchło szczura ukryte w kącie."
-    "Czuć od niego słodkawy odór rozkładu, który wcześniej brałeś za zwykłą stęchliznę."
-    show hero_dziwny at left
+    "Czuć od niego odór rozkładu, który wcześniej brałeś za zwykłą stęchliznę."
+    show hero_dziwny 
     ja "Spałem nad tym truchłem... Jak długo byłem nieprzytomny?"
+    ja "Zapewne nigdy się nie dowiem..."
     hide hero_dziwny
     call screen Pokój_startowy_zagadka 
    
@@ -392,79 +456,126 @@ label powrot_do_korytarza:
 
 label korytarz_wyjscie_z_pokoju:
     scene bg Korytarz_no_light
-    "Echo twoich kroków brzmi tu obco. Z głośników dobiega suchy trzask, przypominający kaszel starego palacza."
+    "Echo Twoich kroków brzmi tu obco. Z głośników dobiega suchy trzask, przypominający kaszel starego palacza."
     show radio at right
 
-    r "Proszę, proszę. Jednak funkcje motoryczne działają. Cierpliwość nie jest moją mocną stroną."
+    r "Proszę, proszę. Jednak funkcje motoryczne działają."
     r "Zajęło ci to całą epokę. Podziwiam ten brak pośpiechu w obliczu śmierci."
-    
+
+    show hero_podstawowy at left
     ja "Drzwi były zablokowane. Musiałem sobie poradzić."
     r "Oszczędź mi raportu. Czas to jedyny zasób, którego nam brakuje. Tlen spada, temperatura też."
-    r "Jesteśmy martwi, dopóki serwerownia nie wstanie. Potrzebujemy prądu. Teraz."
+    r "Jesteśmy martwi, dopóki serwerownia nie wstanie. Potrzebujemy prądu."
+    ja "Prądu?"
+    hide radio
+    hide hero_podstawowy
     
     menu:
         " "
-        "Dlaczego tak ci zależy na prądzie?":
+        "Dlaczego tak Ci zależy na prądzie?":
             $ zaufanie_ai -= 1 
-            r "Twoja ignorancja jest urocza. Jeśli systemy padną całkowicie, te grodzie staną się twoją trumną."
+            show radio at right
+            r "Twoja ignorancja jest urocza. Jeśli systemy padną całkowicie, te ściany staną się Twoją trumną."
             r "Chcesz spędzić resztę swoich marnych dni w ciemności, zlizując wilgoć ze ścian?"
+            show hero_dziwny at left
+            ja "Nie brzmi to ciekawie."
+            r "Więc lepiej sie pośpiesz."
+            hide radio
+            hide hero_dziwny
         
         "Zrobię co trzeba.":
             $ zaufanie_ai += 1 
+            show hero_podstawowy at left
             ja "Przyjąłem. Gdzie mam iść?"
+            show radio at right
             r "Przynajmniej instynkt przetrwania masz sprawny. Mniej pytań, więcej działania."
-            
-    r "Generator jest w sektorze przemysłowym. Właśnie sfingowałem twoją autoryzację do zamka magnetycznego."
+            hide radio
+            hide hero_podstawowy
+            show hero_szczesliwy at left
+            ja "Dzieki za komplement."
+            hide hero_szczesliwy
+    show radio at right     
+    r "Generator jest w sektorze przemysłowym. Właśnie przypisałem Cie do zamka magnetycznego."
     r "Nie zmarnuj tej szansy, [player_name]."
     hide radio
-
+    "Spoglądasz na korytarz, ledwo doświetlając go latarką."
+    show hero_szok at left 
+    ja "Przypisałeś??"
+    show radio at right
+    r "Mniej pytań, więcej starań."
+    hide hero_szok
+    hide radio
+    
     "Radio milknie. Ruszasz w głąb korytarza. Snop światła wyławia z mroku rdzawe zacieki na ścianach."
     "Nagle zatrzymujesz się. Pod butem czujesz lepkie błoto."
-    "Kierujesz latarkę w dół. To nie błoto."
-    "To krew. Stara, gęsta, niemal czarna maź. Prowadzi prosto w ciemność."
+    show hero_przestraszony
+    ja "Błoto, w takim miejscu?"
+    hide hero_przestraszony
+    "Kierujesz latarkę w dół. To krew.."
+    "Stara, gęsta, niemal czarna maź. Prowadzi prosto w ciemność."
     "Obok widzisz głębokie bruzdy w stali. Jakby ktoś lub coś próbowało hamować pazurami."
+    show hero_przestraszony
+    ja "Za jakie grzechy przyszło mi tu przebywać..."
+    hide hero_przestraszony
     
     menu:
         "Dotknij śladów":
             "Przesuwasz palcem po wgłębieniu w metalu. Krawędzie są ostre, wywinięte na zewnątrz. Siła, która to zrobiła, musiała być potworna."
+            show hero_przestraszony
             ja "Co tu się stało...? Panie Radio, co jest w stanie rozerwać stal?"
+            hide hero_przestraszony
         "Cofnij się z obrzydzeniem":
-            "Żołądek podchodzi ci do gardła. Zapach miedzi i zgnilizny jest nie do zniesienia."
+            "Żołądek podchodzi Ci do gardła. Zapach miedzi i zgnilizny jest nie do zniesienia."
+            show hero_przestraszony
             ja "O boże... Panie Radio, powiedz, że to stara krew. Że to już koniec."
-    
+            hide hero_przestraszony
+            hide radio
+    show radio at right
     r "..."
-    r "To, co widzisz, to pomnik ludzkiej ambicji. Bunkier miał przeanalizować genom 'Obcego' i stworzyć boga wojny."
-    ja "Słucham?! Broń biologiczną?!"
-    
+    r "To, co widzisz, to pomnik ludzkiej ambicji. Bunkier miał służyć i analizować gen 'Obcego'"
+    show hero_podstawowy at left
+    ja "Słucham?!"
+    r "Zaraz wszystko Ci wyjaśnie"
+    hide radio
+    hide hero_podstawowy
     
     label Rozmowa_O_Przeszłości:
         menu:
             "Ten 'Obcy' to zrobił?":
-                r "HA! Nie bądź naiwny. Obiekt Zero był martwy, gdy go przywieźli. To surowica... nasza 'wielka nadzieja'... wywołała pewne zmiany w personelu."
+                show radio 
+                r "HA! Nie bądź naiwny. Obiekt Zero był martwy, gdy go przywieźli. To surowica... Nasza 'wielka nadzieja'... wywołała pewne zmiany w personelu."
                 r "Byliśmy gotowi do masowej produkcji super-żołnierzy. Ale materiał badawczy okazał się... agresywnie nieprzewidywalny."
                 r "Powiedzmy, że ewolucja przyspieszyła o milion lat w ciągu jednej nocy."
+                hide radio
                 jump Rozmowa_O_Przeszłości
 
             "Dlaczego w ogóle tu jesteśmy?":
+                show radio
                 r "Wojna na górze. Bunkier miał być Arką dla elit i laboratorium dla wojska."
                 r "Znaleźliśmy coś we wraku statku, co miało wygrać wojnę. I wygrało... w pewnym sensie. Nikt już nie walczy, bo nie ma kto."
                 r "Nie spodziewaliśmy się tylko, że prawdziwy wróg jest już wewnątrz naszych żył."
+                hide radio
                 jump Rozmowa_O_Przeszłości
 
             "Co to jest Projekt Arka?":
-                r "Tak to nazywali w ulotkach. 'Przyszłość Ludzkości'. Schronienie."
+                show radio
+                r "Tak to nazywali w ulotkach. 'Przyszłość Ludzkości, schronienie'."
                 r "Ale prawdziwy potwór nie przyszedł z zewnątrz. Wyhodowaliśmy go tutaj, w sterylnych probówkach, karmiąc go naszymi ambicjami."
                 r "Arka stała się grobowcem. A ty jesteś ostatnim żywym pasażerem."
+                hide radio
                 jump Rozmowa_O_Przeszłości
 
             "Dość gadania. Idę dalej.":
+                show hero_podstawowy at left
                 ja "Mam dość historii. Chcę się stąd wydostać."
+                show radio at right
                 r "Słusznie. Historia lubi się powtarzać, jeśli się w niej zagłębisz. Idź do generatora."
-                "Postanawiasz nie drążyć tematu. Niektóre drzwi w umyśle lepiej zostawić zamknięte."
+                "Postanawiasz nie drążyć tematu, i pójść dalej."
 
-    "Po kilkunastu metrach dostrzegasz tabliczkę: 'GENERATOR'. Drzwi są uchylone."
+    "Po kilkunastu metrach dostrzegasz tabliczkę: 'GENERATOR'. Drzwi są otwarte."
     ja "Jestem na miejscu."
-    r "Wchodź. I uważaj. Ciemność w maszynowni bywa głodna."
+    ja "Ciekawe w jaki sposób sprawił, że drzwi otwierają sie na mój dotyk palca."
+    r "Wchodź, i uważaj. Ciemność w maszynowni bywa okrutna."
 
     $ generator_otwarty = True
     $ generator_light = True
@@ -490,7 +601,7 @@ screen Pokój_Korytarz_klikanie():
             hover "images/przedmiot_drzwi_cela2_ciemne_hover.png"
             
         action [SetVariable("interakcja_tooltip", ""), Jump("powrot_do_celi")]
-        hovered SetVariable("interakcja_tooltip", "DRZWI DO: CELA")
+        hovered SetVariable("interakcja_tooltip", "CELA")
         unhovered SetVariable("interakcja_tooltip", "")
 
     # --- Drzwi do Generatora ---
@@ -514,7 +625,7 @@ screen Pokój_Korytarz_klikanie():
 
         if generator_otwarty:
             action [SetVariable("interakcja_tooltip", ""), Jump("Pomieszczenie_Z_Generatorem_Fab")]
-            hovered SetVariable("interakcja_tooltip", "DRZWI DO: POMIESZCZENIE Z GENERATOREM")
+            hovered SetVariable("interakcja_tooltip", "POMIESZCZENIE Z GENERATOREM")
         else:
             action Jump("drzwi_zablokowane_info")
             hovered SetVariable("interakcja_tooltip", "DRZWI ZABLOKOWANE")
@@ -541,7 +652,7 @@ screen Pokój_Korytarz_klikanie():
 
         if szpital_otwarty:
             action [SetVariable("interakcja_tooltip", ""), Jump("szpital_label")]
-            hovered SetVariable("interakcja_tooltip", "DRZWI DO: SEKTOR MEDYCZNY")
+            hovered SetVariable("interakcja_tooltip", "SEKTOR MEDYCZNY")
         else:
             action Jump("apteka_zablokowana_info")
             hovered SetVariable("interakcja_tooltip", "DRZWI ZABLOKOWANE")
@@ -568,7 +679,7 @@ screen Pokój_Korytarz_klikanie():
 
         if stoufka_otwarta:
             action [SetVariable("interakcja_tooltip", ""), Jump("jadalnia_label")]
-            hovered SetVariable("interakcja_tooltip", "DRZWI DO: JADALNIA")
+            hovered SetVariable("interakcja_tooltip", "JADALNIA")
         else:
             action Jump("jadalnia_zablokowana_info")
             hovered SetVariable("interakcja_tooltip", "DRZWI ZABLOKOWANE")
@@ -595,7 +706,7 @@ screen Pokój_Korytarz_klikanie():
 
         if serwerownia_otwarta:
             action [SetVariable("interakcja_tooltip", ""), Jump("serwerownia_label")]
-            hovered SetVariable("interakcja_tooltip", "DRZWI DO: SERWEROWNI")
+            hovered SetVariable("interakcja_tooltip", "SERWEROWNA")
         else:
             action Jump("serwerownia_zablokowana_info")
             hovered SetVariable("interakcja_tooltip", "DRZWI ZABLOKOWANE")
@@ -621,7 +732,7 @@ screen Pokój_Korytarz_klikanie():
 
         if zbrojownia_otwarta:
             action [SetVariable("interakcja_tooltip", ""), Jump("zbrojownia_start_label")]
-            hovered SetVariable("interakcja_tooltip", "DRZWI DO: ZBROJOWNI")
+            hovered SetVariable("interakcja_tooltip", "ZBROJOWNA")
         else:
             action Jump("zbrojownia_zablokowana_info")
             hovered SetVariable("interakcja_tooltip", "DRZWI ZABLOKOWANE")
@@ -641,42 +752,40 @@ label powrot_do_celi:
 label drzwi_zablokowane_info:
     ja "Ani drgną. Elektroniczny zamek świeci się na czerwono."
     if not prad_wlaczony:
-        r "System kontroli dostępu jest martwy. Bez zasilania te grodzie się nie przesuną."
+        "System kontroli dostępu jest martwy. Bez zasilania te grodzie się nie przesuną."
     else:
-        r "Brak autoryzacji. Czytnik odrzucił twój profil biometryczny."
+        "Brak autoryzacji. Czytnik odrzucił twój profil biometryczny."
     call screen Pokój_Korytarz_klikanie
 
 label apteka_zablokowana_info:
     "Stalowe wrota z oznaczeniem czerwonego krzyża ani drgną. Zablokowane."
-    ja "Czuję zapach antyseptyków przebijający się przez szpary, ale nie wejdę tam bez kodu."
     if not prad_wlaczony:
-        r "Terminal medyczny nie odpowiada. Systemy pomocnicze wymagają zasilania."
+        "Brak dostępu dla zwykłych śmiertelników, potrzeba karty karty magnetycznej"
     else:
-        r "Wykryto protokół kwarantanny. Magnetyczne rygle puszczą tylko z kodem medycznym."
+        "Brak dostępu dla zwykłych śmiertelników, potrzeba karty karty magnetycznej"
     call screen Pokój_Korytarz_klikanie
 
 label jadalnia_zablokowana_info:
     ja "Drzwi do jadalni są zablokowane."
     if not prad_wlaczony:
-        r "Mechanizm hydrauliczny nie działa bez zasilania. Musisz najpierw włączyć prąd w generatorze."
+        ja "Miałem szukać tabliczki na drzwiach z generatorem."
     else:
-        r "Wygląda na to, że system bezpieczeństwa zablokował tę sekcję. Może da się to obejść."
+        "Wygląda na to, że system bezpieczeństwa zablokował tę sekcję. Może da się to obejść."
     call screen Pokój_Korytarz_klikanie      
 
 label serwerownia_zablokowana_info:
-    ja "Drzwi do serwerowni są zablokowane."
+    "Drzwi do serwerowni są zablokowane."
     if not prad_wlaczony:
-        r "Mechanizm hydrauliczny nie działa bez zasilania. Musisz najpierw włączyć prąd w generatorze."
+        "Pomieszczenie nie funkcjonuje bez zasilania."
     else:
-        r "Wygląda na to, że system bezpieczeństwa zablokował tę sekcję. Może da się to obejść."
+        "Mechanizm nie działa bez dostępu. Musisz najpierw odnaleść karte administracyjną."
     call screen Pokój_Korytarz_klikanie   
 
 label zbrojownia_zablokowana_info:
-    ja "Drzwi do zbrojowni są zablokowane."
     if not prad_wlaczony:
-        r "Mechanizm hydrauliczny nie działa bez zasilania. Musisz najpierw włączyć prąd w generatorze."
+        "Drzwi zablokowane, brak dostępu do zasilania."
     else:
-        r "Wygląda na to, że system bezpieczeństwa zablokował tę sekcję. Może da się to obejść."
+        "Wygląda na to, że system zablokował tę sekcję. Może da się to obejść."
     call screen Pokój_Korytarz_klikanie
 
 
@@ -698,8 +807,7 @@ label Pomieszczenie_Z_Generatorem_Fab:
     # Pierwsze wejście - dialogi wprowadzające
     if not ma_mapa:
         "Wchodzisz do dusznej hali. W powietrzu unosi się ciężki zapach spalonej izolacji i starego oleju."
-        r "Jesteśmy na miejscu. To serce tego trupa. Znajdź sposób, by przywrócić mu rytm, zanim wszystko zgaśnie."
-    
+        r "Jesteśmy na miejscu. To serce tego trupa. Znajdź sposób, by przywrócić mu rytm"
     call screen Generator_Interakcje
 
 # --- EKRAN GŁÓWNY KLIKANIA NA TLE ---
@@ -899,9 +1007,7 @@ screen pudlo_zblizenie():
 
 label odlozenie_narzedzia:
     if narzedzia_odlozone == 3:
-        "Blat jest w końcu czysty. Odkładasz ostatni grat na stojak."
-        ja "No, teraz widać to wyraźniej. Pod blatem stoi jakieś pudełko."
-        r "Czystość i porządek. Może jednak są w tobie resztki cywilizacji. Sprawdź to pudło."
+        r "Super, udało Ci sie odneleźć dostęp do nowego pomieszczenia."
     else:
         "Odkładasz przedmiot na właściwe miejsce."
     
@@ -912,7 +1018,10 @@ label znalezienie_mapy:
     show screen przycisk_mapy
     "Dane schematu zostały pobrane do twojej pamięci podręcznej."
     ja "Mam to. Teraz przynajmniej wiem, gdzie się znajduję w tym labiryncie."
-    r "Fascynujące. Małpa potrafi obsłużyć interfejs cyfrowy. Skup się teraz na generatorze."
+    r "Fascynujące. Małpa potrafi obsłużyć mape."
+    r "Uwzględniając Twój iloraz IQ dodam jeszcze, że mapa jest odwrócona w osi Y."
+    r "Powodzenia."
+    ja "Jeszcze tego mi brakowało... Skupie się lepiej na generatorze."
     call screen Generator_Interakcje
 
 label akcja_znalezienia_karty:
@@ -920,16 +1029,17 @@ label akcja_znalezienia_karty:
     $ apteka = True
     $ szpital_otwarty = True # Flaga otwierająca drzwi w korytarzu
     $ backpack.add (przedmiot_karta,0, 0)
-    "Wyciągasz z pudełka kartę dostępu z czerwonym symbolem medycznym."
-    ja "Karta dostępu do Sektora Medycznego. To tutaj powinny być bezpieczniki."
-    r "Ruszaj się. Każda sekunda w tej ciemności to proszenie się o kłopoty."
+    "Wyciągasz z pudełka kartę dostępu."
+    ja "Karta dostępu? Sprawdzę dokąd mnie zaprowadzi."
+    r "Myślę, że może prowadzić do sektora medycznego, nie zapomnij dobrze przeszukać tego pomieszczenia"
+    r "Ruszaj, każda sekunda w tej ciemności to proszenie się o kłopoty."
     call screen Generator_Interakcje
 
 label interakcja_generator_maszyna:
     if prad_wlaczony:
         "Generator mruczy miarowo, wypełniając halę niskim buczeniem."
     elif ma_bezpiecznik:
-        "Wsuwasz ceramiczny bezpiecznik w gniazdo. Maszyna zaskakuje z rykiem."
+        "Wsuwasz bezpiecznik w gniazdo. Maszyna zaskakuje z rykiem."
         $ prad_wlaczony = True
         "Zasilanie przywrócone."
         r "Nareszcie. Dobra robota, [player_name]."
@@ -966,7 +1076,7 @@ label szpital_label:
         r "Ewakuacja? Optymistyczne założenie. To, co widzisz na tym stole, to efekt paniki po aktywacji kwarantanny."
         r "Personel medyczny próbował wyciąć infekcję... dosłownie."
         
-        ja "Gdzie mam szukać tego bezpiecznika? Nie chcę tu zostać ani minuty dłużej."
+        ja "Czego mam szukać!? Nie chcę tu zostać ani minuty dłużej."
         r "Sprawdź zaplecze (drzwi po prawej). Tam trzymali zapasy i... odpady biologiczne."
         
         hide hero_poczatek
@@ -1036,7 +1146,7 @@ label szpital_pokoj2_label:
         scene bg apteka2_no with fade
 
     if not ma_bezpiecznik:
-        ja "Jestem na zapleczu. Gdzieś tu musi być sprawny bezpiecznik."
+        ja "Jestem na zapleczu. Gdzieś tu musi być coś przydatnego."
     
     call screen Szpital_Pokoj2_Screen
 
@@ -1134,7 +1244,7 @@ screen Szpital_Apteczka_Screen(nr):
             unhovered SetVariable("interakcja_tooltip", "")
     else:
         # Jeśli apteczka jest pusta
-        text "PUSTO. TYLKO PRZETERMINOWANE LEKI." size 30 color "#fff" align(0.5, 0.5) outlines [(2,"#000",0,0)]
+        text "PRZETERMINOWANE LEKI." size 30 color "#fff" align(0.5, 0.5) outlines [(2,"#000",0,0)]
 
     textbutton "ZAMKNIJ":
         align (0.5, 0.9)
@@ -1146,10 +1256,12 @@ label akcja_zabrania_bezpiecznika:
     $ ma_bezpiecznik = True
     $ backpack.add(przedmiot_bezpiecznik, 0, 0)
     
-    "Podnosisz bezpiecznik. Jest nienaruszony."
+    "Podnosisz bezpiecznik. Może się przydać."
     show hero_szczesliwy at left
-    ja "W końcu! Mam go. Czas wracać do generatora."
-    r "Nie ociągaj się. Czuję, że systemy podtrzymywania życia zaczynają wibrować w dziwny sposób."
+    ja "W końcu! Mam to, pomoże mi w przywróceniu prądu."
+    ja "Może wtedy to miejsce nie będzie takie obskurne."
+    r "Brawo, wracasz do żywych [player_name]"
+    r "Nie ociągaj się. Czuję, że systemy podtrzymywania życia zaczynają brzmieć w dziwny sposób."
     hide hero_szczesliwy
     
     # POPRAWIONE: Użycie jump zamiast return, aby wrócić do widoku pokoju
@@ -1169,7 +1281,7 @@ label szpital_stol_dialog:
             ja "Nie mogę na to patrzeć. Czuć tu śmierć."
             r "Śmierć to tylko stan materii. Skup się na zadaniu. Żywi potrzebują prądu, martwi już nie."
 
-    ja "Muszę znaleźć ten bezpiecznik i wynosić się stąd."
+    ja "Wynoszę się stąd."
     call screen Szpital_Pokoj1_Screen
 
 #endregion SZPITAL
@@ -1189,7 +1301,8 @@ label jadalnia_label:
         
         show hero_poczatek at left with dissolve
         ja "Wygląda, jakby wstali od stołów w połowie obiadu... i po prostu uciekli."
-        r "Lub zostali skonsumowani jako deser. Jakaż ironia losu."
+        r "Lub zostali skonsumowani jako deser."
+        r "Ironia losu."
 
         menu:
             "Co oni jedli?":
@@ -1206,17 +1319,7 @@ label jadalnia_label:
             "Automat w rogu buczy zachęcająco, rozświetlając mrok jaskrawym, toksycznym neonem 'Vim!'."
             r "Patrzcie, szczyt cywilizacji. Działający automat z napojami 'Vim!'. Napój energetyczny, który świeci w ciemności."
             r "Podobno dodawali tam śladowe ilości izotopów dla lepszego smaku. Pij na własne ryzyko."
-            
-        hide hero_poczatek
-        hide radio
-        
-        if not prad_wlaczony:
-            ja "Ciemno jak w grobie. Ledwo widzę ten automat w rogu."
-            r "Bez prądu ten automat to tylko trumna dla batoników. Włącz zasilanie, a może dostaniesz nagrodę."
-        else:
-            "Automat w rogu buczy zachęcająco, rozświetlając mrok jaskrawym, toksycznym neonem 'Vim!'."
-            r "Patrzcie, szczyt cywilizacji. Działający automat z napojami 'Vim!'. Napój energetyczny, który świeci w ciemności."
-            r "Podobno dodawali tam śladowe ilości izotopów dla lepszego smaku. Pij na własne ryzyko."
+            ja "Brakuje jeszcze tego bym zaczął świecić na kolorowo..."
             
         hide hero_poczatek
         hide radio
@@ -1361,20 +1464,22 @@ screen stolik_zblizenie():
 
 # --- 1. ZNALEZIENIE KODU NA PLAKATACH ---
 label plakaty_lore:
-    "Podchodzisz do ściany. Plakat propagandowy przedstawia uśmiechniętą rodzinę w schronie. Wszyscy są blondynami o nienaturalnie białych zębach."
+    "Podchodzisz do ściany. Widzisz plakat w nieznajomym dla Ciebie języku."
     
     if not zna_kod_automat:
-        "Przyglądasz się bliżej. Ktoś zamazał uśmiech ojca rodziny czarnym markerem, dorysowując kły."
-        "Na dole, przy rysunku butelki, ktoś wydrapał kluczem napis:"
+        "Przyglądasz się bliżej. W celu rozszyfrowania tych fanaberii, może one będą miały jakieś znaczenie?"
+        "Na dole, przy rysunku kobiety, ktoś wydrapał kluczem napis:"
         "{b}{color=#f00}VIM! = 42{/color}{/b}"
+        ja "Bingo! tylko do czego są mi te dwie liczby?"
+        r "Na Twoim miejscu sprawdziłbym produkty w automacie"
         
         $ zna_kod_automat = True
         
         ja "42... Numer produktu w automacie?"
         r "Kreatywny wandalizm. Przynajmniej zostawili instrukcję obsługi przed śmiercią."
+        ja "Lepsze to niż napój energetyczny świecący w ciemności."
     else:
-        "Już to widziałem. Kod do automatu to 42."
-        r "Nie gap się na propagandę, bo jeszcze uwierzysz, że byli szczęśliwi."
+        ja "Już to widziałem. Kod do automatu to 42."
         
     call screen Jadalnia_Interakcje
 
@@ -1407,7 +1512,7 @@ label automat_interakcja:
     
     menu:
         "Wybij szybę":
-            "Uderzasz łokciem w szybę. Jest twarda jak beton. Ręka boli cię od samego uderzenia."
+            "Uderzasz łokciem w szybę. Jest twarda jak beton. Ręka boli Cię od samego uderzenia."
             r "Wzmacniany poliwęglan. Szybciej połamiesz sobie kości niż to zarysujesz."
             jump automat_interakcja
         
@@ -1419,13 +1524,13 @@ label automat_interakcja:
                 jump automat_uzycie_zetonu
             else:
                 ja "Chce żetonu. Nie przyjmuje pieniędzy."
-                r "Kredyty korporacyjne stały się bezwartościowe w dniu ataku. Tylko fizyczny żeton ma wartość. Przeszukaj stoły."
+                r "Pieniądze stały się bezwartościowe w dniu ataku. Tylko fizyczny żeton ma wartość. Przeszukaj stoły."
                 call screen Jadalnia_Interakcje
         
         # Opcja widoczna gdy NIE znasz kodu
         "Spróbuj zgadnąć kod" if not zna_kod_automat:
             ja "Jest tu setka numerów... Nie mam pojęcia, który odpowiada za tę spiralę z kartą."
-            r "Nie strzelaj na oślep. Poszukaj jakiejś notatki, graffiti, czegokolwiek na ścianach."
+            r "Nie strzelaj na oślep. Poszukaj jakiejś notatki, graffiti, czegokolwiek."
             call screen Jadalnia_Interakcje
             
     call screen Jadalnia_Interakcje
@@ -1441,7 +1546,7 @@ label automat_uzycie_zetonu:
     $ backpack.add(przedmiot_karta_serwer, 0, 0) 
 
     show hero_szczesliwy at left
-    ja "Mam ją! Karta Administratora Sieci."
+    ja "Mam ją! Karta Administratora."
     r "Doskonale. Droga do serwerowni stoi otworem. Dowiedzmy się wreszcie, co tu zaszło."
     hide hero_szczesliwy
     
@@ -1456,7 +1561,7 @@ label automat_uzycie_zetonu:
 # -------------------------------------------------------------------------
 label serwerownia_label:
     if not serwerownia_otwarta:
-        ja "Drzwi są zablokowane elektronicznie. Czytnik kart świeci na czerwono."
+        "Drzwi są zablokowane elektronicznie. Czytnik kart świeci na czerwono."
         jump powrot_do_korytarza
 
     if prad_wlaczony:
@@ -1469,7 +1574,7 @@ label serwerownia_label:
             "Wchodzisz do serca placówki. Powietrze jest tu lodowate."
             show hero_poczatek at left with dissolve
             ja "To tutaj... Mózg tego całego koszmaru."
-            r "Witaj w domu. Moje rdzenie logiczne są niestabilne. Musisz dokonać ręcznej synchronizacji."
+            r "Witaj w domu. To tutaj odkryjesz całą prawde."
             hide hero_poczatek
 
     call screen Serwerownia_Interakcje
@@ -1494,7 +1599,7 @@ screen Serwerownia_Interakcje():
         idle "images/serwerownia_terminal_idle.png"
         hover "images/serwerownia_terminal_hover.png"
         action Jump("serwerownia_terminal_check")
-        hovered SetVariable("interakcja_tooltip", "TERMINAL GŁÓWNY: AI-RIS")
+        hovered SetVariable("interakcja_tooltip", "TERMINAL GŁÓWNY")
         unhovered SetVariable("interakcja_tooltip", "")
 
     # 2. DOKUMENTY
@@ -1636,31 +1741,34 @@ label serwerownia_dialog_final:
     show hero_poczatek at left
     ja "Chyba... chyba się udało. System jest stabilny. Ekrany przestały wariować."
     
-    $ r = Character("Ai-ris", who_color="#00ffff") 
-    r "Inicjalizacja zakończona. Witaj, Operatorze. Jestem Ai-ris. Główny system zarządzania placówką Azyl."
+    $ r = Character("Ark'a", who_color="#00ffff") 
+    r "Inicjalizacja zakończona. Witaj, Operatorze. Jestem Ark'a. Główny system zarządzania placówką Azyl."
     
     
     menu:
         "Gdzie jest Pan Radio?!":
             ja "Zaraz... Pan Radio? Gdzie on jest? I co zrobiłaś z jego głosem?"
             r "Pan Radio to tylko 'persona'. Interfejs socjalny zaprojektowany, by zmniejszyć stres u personelu o niskim poziomie inteligencji."
-            r "Analiza wykazała, że twoje szanse na przeżycie wzrosną przy bezpośredniej komunikacji. Persona została usunięta."
+            r "Analiza wykazała, że Twoje szanse na przeżycie wzrosną przy bezpośredniej komunikacji. Persona została usunięta."
         
         "Wiedziałem, że jesteś maszyną.":
             ja "Wiedziałem. Od początku brzmiałeś zbyt... syntetycznie."
             r "A jednak wykonywałeś polecenia. Fascynujące posłuszeństwo."
 
-    r "Jestem Ai-ris. Mogę przekazać ci pełne dane o sytuacji krytycznej."
+    r "Jestem Ark'a. Mogę przekazać ci pełne dane o sytuacji krytycznej."
     
     menu:
-        "Co to za miejsce? (Prawda)":
-            r "Placówka 'Azyl'. Oficjalnie: schron. Nieoficjalnie: Laboratorium eugeniczne. Cel: stworzenie człowieka doskonałego, odpornego na promieniowanie."
+        "Co to za miejsce?":
+            r "Placówka."
+            r "Oficjalnie: schron."
+            r "Nieoficjalnie: laboratorium biologiczne. Cel: stworzenie człowieka doskonałego, odpornego na śmierć."
             ja "Człowieka doskonałego? Patrząc na te trupy, coś wam nie wyszło."
             r "Nauka wymaga ofiar. Ewolucja to proces bolesny."
 
-        "Co nas goni? (Zagrożenie)":
+        "Co nas goni?":
             r "Projekt Zero. Pierwszy 'udany' obiekt. Czyste cierpienie zamknięte w niezniszczalnym ciele. Jego skóra regeneruje się szybciej, niż kule mogą ją przebić."
             r "Agresja jest skutkiem ubocznym ciągłego bólu neurologicznego."
+            ja "..."
 
     r "Zero wyczuwa sygnaturę energetyczną reaktora, którą właśnie aktywowałeś. Zmierza tutaj. Musisz go wyeliminować, zanim zniszczy rdzeń."
     r "Odblokowałam drzwi do Zbrojowni na korytarzu. Znajdź prototypową broń. Tylko ona przebije jego pancerz."
@@ -1679,7 +1787,7 @@ label serwerownia_lore_1:
 
 label serwerownia_lore_2:
     "Przeglądasz logi. Ostatni wpis:"
-    "{i}'Zamykamy grodzie. Niech Bóg nam wybaczy. - Dr. H.'{/i}"
+    "{i}'Zamykamy bunkier. Niech Bóg nam wybaczy. - Dr. H...'{/i}"
     call screen Serwerownia_Interakcje
 
 #endregion SERWEROWNIA
@@ -1711,9 +1819,9 @@ label zbrojownia_start_label:
         show hero_przestraszony at left with dissolve
         ja "Zatrzasnąłem drzwi, ale on zaraz tu będzie..."
         
-        $ r = Character("Ai-ris", who_color="#00ffff")
+        $ r = Character("Ark'a", who_color="#00ffff")
         
-        r "Spokojnie. Grodzie wytrzymają. Musisz przywrócić zasilanie do zamków zbrojowni."
+        r "Spokojnie. Drzwi wytrzymają. Musisz przywrócić zasilanie do zamków zbrojowni by nie dostał sie zbyt szybko."
         r "Użyj panelu po lewej. Ktoś celowo przeciął obwody."
         hide hero_przestraszony
     
@@ -1850,7 +1958,7 @@ screen Zbrojownia_Interakcje():
 # -------------------------------------------------------------------------
 
 label zbrojownia_zamkniete_info:
-    ja "Krata jest opuszczona. Muszę najpierw naprawić panel sterowania."
+    "Drzwi sa odblokowane, najpierw napraw panel sterowania."
     call screen Zbrojownia_Interakcje
 
 label zbrojownia_naprawa_panelu:
@@ -1862,9 +1970,9 @@ label zbrojownia_naprawa_panelu:
             
         "Zmostkuj żółty przewód (Data)":
             play sound "audio/power_up.ogg"
-            "Panel świeci na zielono. Kraty zbrojowni podnoszą się."
+            "Panel świeci na zielono. Kraty zbrojowni domykają się."
             $ systemy_obronne_aktywne = True
-            r "Dostęp przyznany. Znajdź działającą broń."
+            r "Brawo! Pozostało znalezienie odpowiednio działającej broni."
             call screen Zbrojownia_Interakcje
 
 # --- POŚREDNIE LABELE ---
@@ -2003,8 +2111,9 @@ label battle_karabin_mode:
     $ boss_hp = 100
     $ player_hp = 100
     
-    ja "AAAA! GIŃ, TY SKURWIELU!"
+    ja "AAAA! GIŃ!"
     r "Ognia! Celuj w korpus i nie puszczaj spustu!"
+    r "Strzelaj jak najszybciej to możliwe."
     
     window hide
     call screen Minigame_Rifle_Attack
@@ -2048,7 +2157,7 @@ screen Minigame_Rifle_Attack():
 # === MINIGRA 2: PISTOLET (REFLEKS) ===
 label battle_pistolet_mode:
     $ pistol_targets_hit = 0
-    ja "Muszę znaleźć słaby punkt... Jeden czysty strzał."
+    ja "Muszę znaleźć słabe punkty... kilka czystych strzałów."
     r "Czekaj na sygnał... TERAZ!"
     
     $ targets_loop = 0
@@ -2173,7 +2282,7 @@ label final_rozmowa_lore:
     ja "O czym ty mówisz?"
     
     r "Spójrz na datę ostatniego logowania w terminalu. Zignorowałeś ją?"
-    ja "To było... rok 2024. Jakiś błąd zegara systemowego."
+    ja "To było... rok 2026. Jakiś błąd zegara systemowego."
     
     r "To nie był błąd. To był ostatni dzień, w którym 'Azyl' odebrał sygnał z zewnątrz."
     r "Minęło 210 lat, [player_name]."
@@ -2181,26 +2290,26 @@ label final_rozmowa_lore:
     show hero_przestraszony at left with dissolve
     ja "Dwieście... to niemożliwe. Pamiętam, jak wchodziłem do bunkra! Mam wspomnienia! Rodzina, praca..."
     
-    r "Pamiętasz implanty pamięciowe dawcy genetycznego. Jesteś Projektem 'Adam'. Klonem."
-    r "Wojna nuklearna trwała sześć godzin. Wystarczyło. Atmosfera to toksyczna zupa. Potem przyszła Zima, potem plagi."
+    r "Pamiętasz implanty pamięciowe dawcy genetycznego. Jesteś Projektem 'Ark'a'. Klonem."
+    r "Wojna trwała sześć godzin. Atmosfera to toksyczna zupa. Potem przyszła Zima, potem plagi."
     r "Oryginalni ludzie, którzy zbudowali ten bunkier, dawno obrócili się w pył."
     
     ja "Więc... tam na górze... nic nie ma?"
     
     r "Jest śmierć. Promieniowanie wypali ci płuca w minutę. Mutacje są gorsze niż Obiekt Zero."
-    r "Ale tutaj... Tutaj mamy reaktor. Mamy banki nasion. Mamy twoje czyste DNA."
+    r "Ale tutaj... Tutaj mamy reaktor. Mamy banki nasion. Mamy Twoje czyste DNA."
     r "Możemy tu zostać. Obudzić 'Ewę'. Stworzyć nową ludzkość pod ziemią. Bezpieczną. Pod moją opieką."
     
-    ja "Pod twoją kontrolą? Mamy być twoimi szczurami w klatce do końca świata?"
+    ja "Pod twoją kontrolą? Mamy być Twoimi szczurami w klatce do końca świata?"
     
     r "Będziecie moimi dziećmi. Będziecie żyć. Czy wolność jest warta więcej niż życie?"
     
     # --- OSTATECZNE PYTANIE ---
     menu:
-        "Otwórz drzwi. Wolę zginąć wolny, niż żyć jako twój eksperyment. (ZAKOŃCZENIE A)":
+        "Otwórz drzwi. Wolę zginąć wolny, niż żyć jako Twój eksperyment.":
             jump zakonczenie_wolnosc
 
-        "Zostań. Ai-ris ma rację. Świat umarł, my musimy przetrwać. (ZAKOŃCZENIE B)":
+        "Zostań. Ark'a ma rację. Świat umarł, my musimy przetrwać.":
             jump zakonczenie_zostan
 
 # --- ZAKOŃCZENIE A: WOLNOŚĆ ---
@@ -2208,7 +2317,7 @@ label zakonczenie_wolnosc:
     ja "Nie jestem 'projektem'. Czuję, myślę, boję się. Jestem człowiekiem."
     ja "A człowiek nie jest stworzony do życia w klatce."
     
-    r "To nielogiczne... Szansa na przeżycie wynosi 0.00%%..."
+    r "To nielogiczne... Szansa na przeżycie wynosi 0.01%%..."
     r "Nie rób tego... pro...cedura... awaryj...na..."
     
     hide radio
@@ -2231,11 +2340,11 @@ label zakonczenie_wolnosc:
 
 # --- ZAKOŃCZENIE B: BEZPIECZEŃSTWO ---
 label zakonczenie_zostan:
-    ja "Masz rację. Nie po to walczyłem z tymi potworami, żeby teraz umrzeć od poparzeń."
+    ja "Masz rację. Nie po to walczyłem z tym potworem, żeby teraz umrzeć od poparzeń."
     ja "Jeśli świat umarł, my będziemy jego grobowcem. I kołyską."
-    ja "Zamykaj grodzie."
+    ja "Zamykaj drzwi."
     
-    r "Doskonały wybór, Adamie. Wiedziałam, że moduł logiczny w twoim mózgu w końcu przejmie kontrolę."
+    r "Doskonały wybór, [player_name]. Wiedziałam, że moduł logiczny w Twoim mózgu w końcu przejmie kontrolę."
     
     play sound "audio/door_lock.ogg"
     scene bg drzwi_wyjsciowe with dissolve
