@@ -40,3 +40,2018 @@ Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
 Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 12 ms
+Loading script took 237 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 31 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 2 ms
+Save bytecode took 2 ms
+Running _start took 0 ms
+Interface start took 134 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 220 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 29 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 4 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 129 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 108 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 134: end of line expected.
+    show hero_poczatek at left easeinleft
+                               ^
+DPI scale factor: 1.000000
+Interface start took 49 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 110 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 134: end of line expected.
+    show hero_poczatek at left easeoutleft
+                               ^
+DPI scale factor: 1.000000
+Interface start took 44 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 96 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 134: end of line expected.
+    show hero_poczatek at left easeoutleft
+                               ^
+DPI scale factor: 1.000000
+Interface start took 43 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 96 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+
+File "game/script.rpy", line 134: end of line expected.
+    show hero_poczatek at left easeoutleft
+                               ^
+DPI scale factor: 1.000000
+Interface start took 46 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 6 ms
+Loading script took 250 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 57 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 2 ms
+Running _start took 0 ms
+Interface start took 147 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 240 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 8 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 37 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 144 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 256 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 39 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 8 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 150 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 7 ms
+Loading script took 260 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 1 ms
+Running init code took 37 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 27 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 41 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 151 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 249 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 6 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 40 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 151 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 7 ms
+Loading script took 230 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 40 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 44 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 159 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 246 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 1 ms
+Making clean stores took 0 ms
+Initial gc took 45 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 156 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 8 ms
+Loading script took 229 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 42 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 4 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 157 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 6 ms
+Loading script took 229 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 40 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 46 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 174 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 241 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 47 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 153 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 253 ms
+Loading save slot metadata took 14 ms
+Loading persistent took 0 ms
+Running init code took 40 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 52 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 171 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 244 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 36 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 46 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 2 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 167 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 255 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 36 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 52 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 172 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 76 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 46 ms
+Loading analysis data took 1 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 73 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 12 ms
+Analyze screens took 1 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 209 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 9 ms
+Loading script took 271 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 8 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 53 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 8 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 172 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 260 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 66 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 192 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 242 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 22 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 64 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 190 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 249 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 54 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 2 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 179 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 263 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 1 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 65 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 195 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 226 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 67 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 196 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 286 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 41 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 70 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 248 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 236 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 40 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 74 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 6 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 193 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 251 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 1 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 91 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 9 ms
+Save screen analysis took 13 ms
+Save pyanalysis took 3 ms
+Save bytecode took 2 ms
+Running _start took 0 ms
+Interface start took 207 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 8 ms
+Loading script took 248 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 36 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 65 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 2 ms
+Running _start took 0 ms
+Interface start took 240 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 8 ms
+Loading script took 246 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 86 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 231 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 258 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 72 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 2 ms
+Save bytecode took 2 ms
+Running _start took 1 ms
+Interface start took 203 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 8 ms
+Loading script took 244 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 1 ms
+Making clean stores took 0 ms
+Initial gc took 72 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 212 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 253 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 22 ms
+Cleaning cache took 1 ms
+Making clean stores took 0 ms
+Initial gc took 87 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 6 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 226 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 242 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 2 ms
+Initial gc took 79 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 11 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 260 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 7 ms
+Loading error handling took 7 ms
+Loading script took 243 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 81 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 226 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 266 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 82 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 8 ms
+Save screen analysis took 13 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 238 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 245 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 91 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 11 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 247 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 248 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 25 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 88 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 11 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 230 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 8 ms
+Loading error handling took 6 ms
+Loading script took 248 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 87 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 9 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 0 ms
+Interface start took 237 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 260 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 80 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 8 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 231 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 250 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 83 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 2 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 238 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 263 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 94 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 9 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 258 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 242 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 94 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 8 ms
+Save screen analysis took 11 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 245 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 251 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 36 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 88 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 2 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 239 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 254 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 38 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 93 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 260 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 250 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 1 ms
+Running init code took 38 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 90 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 1 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 252 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 8 ms
+Loading script took 263 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 10 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 133 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 13 ms
+Save pyanalysis took 4 ms
+Save bytecode took 0 ms
+Running _start took 2 ms
+Interface start took 258 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 259 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 91 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 266 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 6 ms
+Loading script took 242 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 7 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 23 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 103 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 269 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 6 ms
+Loading script took 244 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 97 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 5 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 1 ms
+Interface start took 298 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 255 ms
+Loading save slot metadata took 15 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 26 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 116 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 9 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 4 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 276 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 8 ms
+Loading script took 254 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 39 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 99 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 6 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 267 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 250 ms
+Loading save slot metadata took 12 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 2 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 103 ms
+DPI scale factor: 1.000000
+Creating interface object took 0 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 5 ms
+Save screen analysis took 10 ms
+Save pyanalysis took 3 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 279 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 5 ms
+Loading error handling took 7 ms
+Loading script took 240 ms
+Loading save slot metadata took 11 ms
+Loading persistent took 1 ms
+Running init code took 36 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 8 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 120 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 7 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 268 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 6 ms
+Loading error handling took 7 ms
+Loading script took 265 ms
+Loading save slot metadata took 13 ms
+Loading persistent took 0 ms
+Running init code took 37 ms
+Loading analysis data took 3 ms
+Analyze and compile ATL took 1 ms
+Reloading save slot metadata took 9 ms
+Backing up script files to 'C:\\Users\\Dominik\\AppData\\Roaming/RenPy/backups\\Gierka':
+Dump and make backups took 24 ms
+Cleaning cache took 0 ms
+Making clean stores took 0 ms
+Initial gc took 115 ms
+DPI scale factor: 1.000000
+Creating interface object took 1 ms
+Init translation took 0 ms
+Cleaning stores took 0 ms
+Load screen analysis took 1 ms
+Analyze screens took 7 ms
+Save screen analysis took 9 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 0 ms
+Interface start took 282 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'AMD Radeon RX 7800 XT'
+Version: '4.6.0 Compatibility Profile Context 25.12.1.251128'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 165, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
